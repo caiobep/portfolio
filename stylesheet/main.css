@@ -40,6 +40,7 @@ h3{
 p{
   font-family: 'Lato', sans-serif;
   font-weight: 400;
+  font-size: 1rem;
 }
 
 a{
@@ -53,7 +54,6 @@ a:hover{
 
  ul{
   list-style: none;
-  margin-left: 70%;
 }
 
  li{
@@ -83,26 +83,26 @@ a:hover{
 }
 
 .bio{
-  margin-left:40px;
+  margin-top:20px;
 }
 
 .bio p{
   width:400px;
 }
 
-.coluna1{
-  float:left;
+.nav{
+  margin-left:70%;
+}
+
+.coluna1, .coluna2{
+  display: inline-block;
+  margin-left: 80px;
 }
 
 .coluna1 a{
   color:red;
 }
 
-.coluna2{
-  float: left;
-  margin-left:200px;
-  margin-top:-35px;
-}
 .coluna2 a{
   color:#f87335;
 }
@@ -119,32 +119,34 @@ a:hover{
   clear:both;
 }
 
-.footer{
-  position:absolute;
-  bottom: -200px;
-  width:100%;
+.space{
+  height:100px;
+}
 
+.footer{
+  margin-top: 50px;
   font-family:'Lato', sans-serif;
   font-weight: 400px;
   background-color:black;
   color:white;
 
-  width:100%;
+  padding-top:10px;
+  padding-bottom:5px;
+  padding-left: 25%;
 }
 
 .main-services{
-  margin-top:30px;
   font-size: 25px;
-  margin-left:330px;
 }
 
 #espaco{
   margin:20px;
 }
-.services ul{
-  margin-left: -80px;
-}
 
 .services{
-  margin-left:500px;
+  margin-left:100px;
+}
+
+copyright{
+  margin-left:80px;
 }
