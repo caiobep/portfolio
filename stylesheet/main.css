@@ -37,6 +37,10 @@ h3{
   line-height: 1.5em;
 }
 
+#ioetep{
+  color:#f87335;
+}
+
 p{
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -83,28 +87,17 @@ a:hover{
 }
 
 .bio{
-  margin-top:20px;
+  padding: 30px 0 10px 0;
 }
 
-.bio p{
-  width:400px;
+.coluna1 , .coluna2 , .coluna3{
+display: inline-block;
+width:30%;
+margin-left:30px;
 }
 
 .nav{
   margin-left:70%;
-}
-
-.coluna1, .coluna2{
-  display: inline-block;
-  margin-left: 80px;
-}
-
-.coluna1 a{
-  color:red;
-}
-
-.coluna2 a{
-  color:#f87335;
 }
 
 .header{
@@ -149,4 +142,48 @@ a:hover{
 
 copyright{
   margin-left:80px;
+}
+
+@media (max-width:700px){
+  h1{
+    display: none;
+  }
+  .nav{
+    margin-left:-20px;
+  }
+
+  .aboutme p {
+    display: none;
+  }
+
+  .coluna1 , .coluna2 , .coluna3{
+   display:block;
+   width:25%;
+  }
+
+  .footer{
+    margin-top: 50px;
+    font-family:'Lato', sans-serif;
+    font-weight: 400px;
+    font-size: 0.75em;
+    background-color:black;
+    color:white;
+
+    padding-top:10px;
+    padding-bottom:5px;
+    padding-left: 0;
+  }
+
+  .main-services{
+    font-size: 1.4em;
+
+  }
+  #espaco{
+    margin:1px;
+  }
+  .services{
+    margin-left: 0;
+  }
+
+
 }
