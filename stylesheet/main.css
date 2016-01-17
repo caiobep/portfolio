@@ -152,6 +152,10 @@ copyright{
     margin-left:-20px;
   }
 
+  #header-image{
+    width:700px;
+  }
+
   .aboutme p {
     display: none;
   }
