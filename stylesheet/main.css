@@ -167,6 +167,7 @@ a>div{
   header>h1{
     color:white;
     font-size:3em;
+    -webkit-animation:psyco 8s infinite;
   }
 
   .bio{
@@ -190,6 +191,14 @@ a>div{
     float:left;
   }
 
+  @-webkit-keyframes psyco{
+    0%   {text-shadow: none;}
+    25%  {text-shadow: 10px -10px rgb(242, 2, 46);}
+    50%  {text-shadow: none;}
+    75%  {text-shadow: 10px -10px rgb(242, 2, 46);}
+    100% {text-shadow: none;}
+  }
+
 }
 
 @media (max-width:600px) {
@@ -201,5 +210,8 @@ a>div{
   }
   a>div{
     margin:8px;
+  }
+  .bio , .coluna>p, .coluna>h2{
+    text-align: center;
   }
 }
