@@ -47,6 +47,9 @@ li>a:hover{
   text-decoration: overline;
   border-color: rgba(255, 255, 255, 0);
   /*-webkit-transform:translate(0, -10px);*/
+}
+
+li>a:active{
   -webkit-animation: bounce 1.5s infinite;
 }
 
@@ -60,11 +63,7 @@ header>h1{
   text-align:center;
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
-  transition:.5s ease-in;
-  cursor:default;
-}
-header>h1:hover{
-  text-shadow: 10px -10px rgb(242, 2, 46);
+  cursor:default`;
 }
 
 .container{
@@ -167,7 +166,6 @@ a>div{
   header>h1{
     color:white;
     font-size:3em;
-    -webkit-animation:psyco 8s infinite;
   }
 
   .bio{
@@ -189,14 +187,6 @@ a>div{
 
   .coluna>p{
     float:left;
-  }
-
-  @-webkit-keyframes psyco{
-    0%   {text-shadow: none;}
-    25%  {text-shadow: 10px -10px rgb(242, 2, 46);}
-    50%  {text-shadow: none;}
-    75%  {text-shadow: 10px -10px rgb(242, 2, 46);}
-    100% {text-shadow: none;}
   }
 
 }
