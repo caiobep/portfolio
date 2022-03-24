@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import { Client } from '@notionhq/client'
 import { getPosts } from '../lib/notion-api'
 
 interface HomeProps {
@@ -26,12 +25,7 @@ const Home: NextPage<HomeProps> = (props) => {
 export const getStaticProps = async () => {
   const posts = await getPosts()
 
-  return {
-    props: {
-      posts
-    }
-  }
-
+  return { props: { posts } }
 }
 
 export default Home

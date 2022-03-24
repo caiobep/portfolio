@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  color: #9B9A97;
+}
+
 * {
   box-sizing: border-box;
 }
