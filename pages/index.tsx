@@ -11,7 +11,7 @@ const Home: NextPage<HomeProps> = (props) => {
     <>
       <h1> Here's a random breaking bad quote </h1>
       {props.posts.map(post => (
-        <Link href={`/posts/${post.url}`}>
+        <Link href={`/posts/${post.url}`} key={post.id}>
           <a>
             <div key={post.id}>
               <h3> {post.title} </h3>

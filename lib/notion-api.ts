@@ -54,12 +54,16 @@ export async function getAllPostIds(): Promise<string[]> {
 }
 
 export async function getPostContent(pageURL: string): Promise<Page> {
-  const { html, ...pageContent } = await NotionPageToHtml.convert(pageURL)
-  const htmlContent = html.replace(/<header[^>]*>.*<\/header>/gs, '')
+  const { html, ...pageContent } = await NotionPageToHtml.convert(pageURL, {
+    excludeScripts: true,
+    excludeMetadata: true,
+    excludeTitleFromHead: true,
+    bodyContentOnly: true,
+  })
 
   return {
     ...pageContent,
-    htmlContent
+    htmlContent: html
   }
 }
 
