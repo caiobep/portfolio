@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import { getPosts } from '../lib/notion-api'
 
 interface HomeProps {
@@ -10,10 +11,14 @@ const Home: NextPage<HomeProps> = (props) => {
     <>
       <h1> Here's a random breaking bad quote </h1>
       {props.posts.map(post => (
-        <div key={post.id}>
-          <h3> {post.title} </h3>
-          <span> {new Date(post.createdAt).toLocaleDateString()} </span>
-        </div>
+        <Link href={`/posts/${post.url}`}>
+          <a>
+            <div key={post.id}>
+              <h3> {post.title} </h3>
+            </div>
+            <span> {new Date(post.createdAt).toLocaleDateString()} </span>
+          </a>
+        </Link>
       ))}
       <pre>
         {JSON.stringify(props.posts)}

@@ -13,13 +13,13 @@ export default function Post({ postData }) {
           <div className={utilStyles.lightText} >
             <span> {postData.date}</span>
           </div>
-          <div dangerouslySetInnerHTML={{ __html: postData.html }} />
+          <div dangerouslySetInnerHTML={{ __html: postData.htmlContent }} />
       </article>
     </>
   )
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths(): Promise<{ paths: { params: { id: string } }[]; fallback: boolean }> {
   const paths = (await getAllPostIds()).map(id => ({
     params: { id }
   }))
@@ -30,10 +30,10 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }): Promise<{ props: { postData: Page } }> {
   const posts = await getPosts()
   const selectedPost = posts.find(post => post.url === params.id)
-  const postData = await getPostContent(selectedPost.notionUrl)
+  const postData = await getPostContent(selectedPost?.notionUrl)
 
   return {
     props: {

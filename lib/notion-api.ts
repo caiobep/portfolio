@@ -11,7 +11,7 @@ interface Post {
 }
 
 interface Page {
-  html: string;
+  htmlContent: string;
   title?: string;
   icon?: string;
   cover?: string;
@@ -54,9 +54,12 @@ export async function getAllPostIds(): Promise<string[]> {
 }
 
 export async function getPostContent(pageURL: string): Promise<Page> {
-  const pageMarkdown = NotionPageToHtml.convert(pageURL)
-  console.dir(pageMarkdown)
+  const { html, ...pageContent } = await NotionPageToHtml.convert(pageURL)
+  const htmlContent = html.replace(/<header[^>]*>.*<\/header>/gs, '')
 
-  return pageMarkdown
+  return {
+    ...pageContent,
+    htmlContent
+  }
 }
 
