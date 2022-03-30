@@ -3,6 +3,8 @@ name: CI
 on:
   pull_request:
     branches: [ main ]
+  push:
+      branches: [feat/notion-api-rewrite]
 
 jobs:
   build:
