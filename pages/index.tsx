@@ -1,15 +1,15 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import { getPosts } from '../lib/notion-api'
+import { getPosts, NotionPage } from '../lib/notion-api'
 
 interface HomeProps {
-  posts: string
+  posts: NotionPage[]
 }
 
 const Home: NextPage<HomeProps> = (props) => {
   return (
     <>
-      <h1> Here's a random breaking bad quote </h1>
+      <h1> Blog </h1>
       {props.posts.map(post => (
         <Link href={`/posts/${post.url}`} key={post.id}>
           <a>
@@ -20,9 +20,6 @@ const Home: NextPage<HomeProps> = (props) => {
           </a>
         </Link>
       ))}
-      <pre>
-        {JSON.stringify(props.posts)}
-      </pre>
     </>
   )
 }

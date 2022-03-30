@@ -1,27 +1,59 @@
 import { Client } from "@notionhq/client"
-import NotionPageToHtml from "notion-page-to-html"
+import { NotionToMarkdown } from 'notion-to-md'
+import { remark } from "remark"
+import html from "remark-html"
 
-interface Post {
+export interface NotionPage {
   id: string
   title: string
   createdAt: string | Date
-  content: string
+  content: string | Map<string, unknown> | undefined
   url: string
   notionUrl: string
 }
 
-interface Page {
-  htmlContent: string;
-  title?: string;
-  icon?: string;
-  cover?: string;
+export interface Page {
+  htmlContent: string | any
+  date: string
+  title?: string
+  icon?: string
+  cover?: string
 }
 
-const createNotionClient = () => new Client({ auth: process.env.NOTION_API_KEY as string })
+export interface NotionPageResponse {
+  id: string,
+  page: Map<string, unknown>
+  url: string,
+  created_time: string
+  properties: {
+    Name: {
+      title: [
+        {
+          text: {
+            content: string
+          }
+        }
+      ]
+    }
+  }
+}
+
+export function convertNotionReturnToPageObject(page: NotionPageResponse): NotionPage {
+  return {
+    id: page?.id,
+    title: page.properties.Name.title[0].text.content,
+    url: sanitizeStringUri(page.properties.Name.title[0].text.content),
+    createdAt: page?.created_time,
+    content: page?.page || {},
+    notionUrl: page?.url,
+  }
+}
+
+export const createNotionClient = () => new Client({ auth: process.env.NOTION_API_KEY as string })
 
 export const sanitizeStringUri = (s: string) => s.replaceAll(' ', '-').toLowerCase().replace(/[^a-z0-9-]/g, '')
 
-export async function getPosts(): Promise<Post[]> {
+export async function getPosts(): Promise<NotionPage[]> {
   const notion = createNotionClient()
 
   const BLOG_TAG = process.env.BLOG_TAG as string
@@ -36,14 +68,10 @@ export async function getPosts(): Promise<Post[]> {
     }
   })
 
-  const posts = postPages.results.map(page => ({
-    id: page.id,
-    title: page.properties.Name.title[0].text.content,
-    url: sanitizeStringUri(page.properties.Name.title[0].text.content),
-    createdAt: page?.created_time,
-    content: page?.page || '',
-    notionUrl: page?.url || '',
-  }))
+  const posts = (postPages.results as unknown as NotionPageResponse[])
+    .map<NotionPage>(convertNotionReturnToPageObject)
+
+  console.dir(posts)
 
   return posts
 }
@@ -53,17 +81,24 @@ export async function getAllPostIds(): Promise<string[]> {
   return posts.map(p => p.url)
 }
 
-export async function getPostContent(pageURL: string): Promise<Page> {
-  const { html, ...pageContent } = await NotionPageToHtml.convert(pageURL, {
-    excludeScripts: true,
-    excludeMetadata: true,
-    excludeTitleFromHead: true,
-    bodyContentOnly: true,
-  })
+export async function getPostContent(pageId: string): Promise<Page> {
+  const notionClient = createNotionClient()
+  const page = await notionClient.pages.retrieve({ page_id: pageId }) as unknown as NotionPageResponse
+  const parsedPage = convertNotionReturnToPageObject(page)
+  const n2m = new NotionToMarkdown({ notionClient: createNotionClient() })
+  const markdownBlocks = (await n2m.pageToMarkdown(pageId))
+  const pageInMarkdownString = n2m.toMarkdownString(markdownBlocks)
+
+  const htmlContent = (await remark()
+    .use(html)
+    .process(pageInMarkdownString))
+    .toString()
+
 
   return {
-    ...pageContent,
-    htmlContent: html
+    ...parsedPage,
+    date: parsedPage.createdAt.toString(),
+    htmlContent,
   }
 }
 

@@ -1,19 +1,25 @@
+import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head'
-import { getAllPostIds, getPostContent, getPosts } from '../../lib/notion-api'
+import { NotionPage } from 'notion-page-to-html/dist/main/protocols/notion-page';
+import { getAllPostIds, getPostContent, getPosts, Page } from '../../lib/notion-api'
 import utilStyles from '../../styles/utils.module.css'
 
-export default function Post({ postData }) {
+interface PostData {
+  postData: Page
+}
+
+const Post: NextPage<PostData> = ({ postData }) => {
   return (
     <>
       <Head>
-        <title>{postData.title} </title>
+        <title>{postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl} > {postData.title} < /h1>
-          <div className={utilStyles.lightText} >
-            <span> {postData.date}</span>
-          </div>
-          <div dangerouslySetInnerHTML={{ __html: postData.htmlContent }} />
+        <h1 className={utilStyles.headingXl}> {postData.title} </h1>
+        <div className={utilStyles.lightText} >
+          <span> {postData.date}</span>
+        </div>
+        <div dangerouslySetInnerHTML={{ __html: postData.htmlContent }} />
       </article>
     </>
   )
@@ -30,10 +36,10 @@ export async function getStaticPaths(): Promise<{ paths: { params: { id: string 
   }
 }
 
-export async function getStaticProps({ params }): Promise<{ props: { postData: Page } }> {
+export async function getStaticProps({ params }: { params: { id: string } }): Promise<{ props: { postData: Page } }> {
   const posts = await getPosts()
   const selectedPost = posts.find(post => post.url === params.id)
-  const postData = await getPostContent(selectedPost?.notionUrl)
+  const postData = await getPostContent(selectedPost?.id as string)
 
   return {
     props: {
@@ -42,3 +48,5 @@ export async function getStaticProps({ params }): Promise<{ props: { postData: P
   }
 }
 
+
+export default Post
