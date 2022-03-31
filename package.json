@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "test:e2e": "playwright test",
     "lint": "npm-run-all lint:style lint:eslint",
     "lint:staged": "lint-staged",
     "lint:fix": "npm-run-all lint:style:fix lint:eslint:fix",
@@ -26,7 +26,7 @@
     "remark": "~14.0.2"
   },
   "devDependencies": {
-    "@notionhq/client": "~1.0.4",
+    "@playwright/test": "~1.20.1",
     "@types/node": "17.0.23",
     "@types/react": "17.0.42",
     "eslint": "8.11.0",
