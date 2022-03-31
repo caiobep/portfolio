@@ -1,7 +1,12 @@
-import { GetStaticProps, NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import { NotionPage } from 'notion-page-to-html/dist/main/protocols/notion-page';
-import { getAllPostIds, getPostContent, getPosts, Page } from '../../lib/notion-api'
+import { NotionPage } from 'notion-page-to-html/dist/main/protocols/notion-page'
+import {
+  getAllPostIds,
+  getPostContent,
+  getPosts,
+  Page,
+} from '../../lib/notion-api'
 import utilStyles from '../../styles/utils.module.css'
 
 interface PostData {
@@ -16,7 +21,7 @@ const Post: NextPage<PostData> = ({ postData }) => {
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}> {postData.title} </h1>
-        <div className={utilStyles.lightText} >
+        <div className={utilStyles.lightText}>
           <span> {postData.date}</span>
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.htmlContent }} />
@@ -25,28 +30,34 @@ const Post: NextPage<PostData> = ({ postData }) => {
   )
 }
 
-export async function getStaticPaths(): Promise<{ paths: { params: { id: string } }[]; fallback: boolean }> {
-  const paths = (await getAllPostIds()).map(id => ({
-    params: { id }
+export async function getStaticPaths(): Promise<{
+  paths: { params: { id: string } }[]
+  fallback: boolean
+}> {
+  const paths = (await getAllPostIds()).map((id) => ({
+    params: { id },
   }))
 
   return {
     paths,
-    fallback: false
+    fallback: false,
   }
 }
 
-export async function getStaticProps({ params }: { params: { id: string } }): Promise<{ props: { postData: Page } }> {
+export async function getStaticProps({
+  params,
+}: {
+  params: { id: string }
+}): Promise<{ props: { postData: Page } }> {
   const posts = await getPosts()
-  const selectedPost = posts.find(post => post.url === params.id)
+  const selectedPost = posts.find((post) => post.url === params.id)
   const postData = await getPostContent(selectedPost?.id as string)
 
   return {
     props: {
-      postData
-    }
+      postData,
+    },
   }
 }
-
 
 export default Post

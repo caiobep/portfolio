@@ -9,8 +9,8 @@ interface HomeProps {
 const Home: NextPage<HomeProps> = (props) => {
   return (
     <>
-      <h1> Blog </h1>
-      {props.posts.map(post => (
+      <h1>Blog</h1>
+      {props.posts.map((post) => (
         <Link href={`/posts/${post.url}`} key={post.id}>
           <a>
             <div key={post.id}>
