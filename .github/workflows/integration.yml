@@ -23,6 +23,19 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
+    - name: 'Make Environment File'
+      uses: SpicyPizza/create-envfile@v1.3
+      with:
+        file_name: .env
+        envkey_NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+        envkey_NOTION_API_URL: ${{ secrets.NOTION_API_URL }}
+        envkey_NOTION_API_VERSION: ${{ secrets.NOTION_API_VERSION }}
+
+        envkey_BLOG_DB: ${{ secrets.BLOG_DB }}
+        envkey_BLOG_TAG: ${{ secrets.BLOG_TAG }}
+        envkey_PODCAST_TAG: ${{ secrets.PODCAST_TAG }}
+        envkey_TALKS_TAG: ${{ secrets.TALKS_TAG }}
+ 
     - name: "Install Dependencies"
       run: npm ci
 
