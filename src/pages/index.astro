@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tangent Lines</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="relative flex flex-col items-center block mt-[20vh] mb-auto">
+        <h1
+          class="relative text-6xl md:text-8xl font-bold tracking-tight bg-clip-text dark:text-white/80"
+        >
+          Tangent Lines
+        </h1>
+        <p
+          class="text-lg sm:text-2xl max-w-3xl dark:text-white/80 text-center mt-1"
+        >
+          New perspectives at the intersection of tech and creativity
+        </p>
+      </div>
+    </main>
+
+    <div class="relative mt-6 ml-auto mr-auto w-[30%]">
+      <ul class="flex flex-row items-center gap-10">
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/podcasts">Podcasts</a></li>
+        <li><a href="/consulting">Consulting</a></li>
+        <li><a href="/about-me">About Me</a></li>
+      </ul>
+
+      <ul class="flex flex-row items-center gap-10 dark:text-white/50">
+        <li><a href="https://twitter.com/caicorre">Twitter</a></li>
+        <li><a href="https://mstdn.social/@caicorre">Mastodon</a></li>
+        <li><a href="https://github.com/caiobep">GitHub</a></li>
+      </ul>
+    </div>
+  </body>
+
+  <style>
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #111111;
+        color: #fff;
+      }
+    }
+  </style>
+</html>
