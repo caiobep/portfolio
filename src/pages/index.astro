@@ -1,63 +1,65 @@
----
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
----
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
     <title>Tangent Lines</title>
   </head>
 
   <body>
+    <navbar class="p-4 flex flex-row justify-between dark:bg-black">
+      <a href="/">Tangent Lines</a>
+      <ul class="flex flex-row gap-4">
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/podcasts">Podcasts</a></li>
+        <li><a href="/talks">Talks</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li>
+          <span class="search-icon flex flex-row gap-4"> 🔍</span>
+        </li>
+      </ul>
+    </navbar>
+
     <main>
-      <div class="relative flex flex-col items-center block mt-[20vh] mb-auto">
-        <h1
-          class="relative text-6xl md:text-8xl font-bold tracking-tight bg-clip-text dark:text-white/80"
-        >
-          Tangent Lines
-        </h1>
-        <p
-          class="text-lg sm:text-2xl max-w-3xl dark:text-white/80 text-center mt-1"
-        >
-          New perspectives at the intersection of tech and creativity
-        </p>
+      <div
+        class="h-[400px] m-8 rounded-xl bg-white/10 p-8 flex flex-row align-middle justify-center max-w-[900px]"
+      >
+        <div class="w-[60%]">
+          <h1 class="text-5xl font-bold">Tangent Lines</h1>
+          <p class="text-white/70">
+            A blog about software engineering, design, and the intersection of
+            the two.
+          </p>
+        </div>
+
+        <div class="w-[30%]">
+          <img
+            src="https://github.com/caiobep.png"
+            class="rounded-full w-48 h-48"
+          />
+        </div>
       </div>
     </main>
 
-    <div class="relative mt-6 ml-auto mr-auto w-[30%]">
-      <ul class="flex flex-row items-center gap-10">
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/podcasts">Podcasts</a></li>
-        <li><a href="/consulting">Consulting</a></li>
-        <li><a href="/about-me">About Me</a></li>
-      </ul>
+    <footer></footer>
 
-      <ul class="flex flex-row items-center gap-10 dark:text-white/50">
-        <li><a href="https://twitter.com/caicorre">Twitter</a></li>
-        <li><a href="https://mstdn.social/@caicorre">Mastodon</a></li>
-        <li><a href="https://github.com/caiobep">GitHub</a></li>
-      </ul>
-    </div>
-  </body>
+    <style>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
 
-  <style>
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    @media (prefers-color-scheme: dark) {
       body {
-        background-color: #111111;
-        color: #fff;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
-    }
-  </style>
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    </style>
+  </body>
 </html>
