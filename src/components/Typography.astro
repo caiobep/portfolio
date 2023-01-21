@@ -26,9 +26,9 @@ const withBaseStyles = (classes: string) => {
   return `${fontColor} ${classes}`;
 };
 
-const getElementFromMap = (
-  x = "default"
-): { element: string; classes: string } =>
+type ElementDefinition = { element: string; classes: string } | undefined;
+
+const getElementFromMap = (x = "default"): ElementDefinition =>
   ({
     h1: {
       element: "h1",
@@ -78,7 +78,7 @@ const getElementFromMap = (
       element: "span",
       classes: withBaseStyles("text-base"),
     },
-  }[x]);
+  }[x] as ElementDefinition);
 
 const { element, classes } = getElementFromMap(variant);
 ---
