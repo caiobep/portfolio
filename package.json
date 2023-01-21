@@ -9,6 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "test": "run-p test:static:*",
     "test:static": "run-p test:static:*",
     "test:static:typescript": "tsc --noEmit",
     "test:static:eslint": "eslint --ext .js,.jsx,.ts,.tsx src"
