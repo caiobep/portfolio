@@ -1,0 +1,86 @@
+---
+export interface Props {
+  variant?:
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
+    | "h6"
+    | "subtitle1"
+    | "subtitle2"
+    | "body1"
+    | "body2"
+    | "caption";
+  color?: "primary" | "secondary";
+}
+
+const { variant, color, children } = Astro.props;
+
+const withBaseStyles = (classes: string) => {
+  const fontColor =
+    color === "primary"
+      ? "dark:text-white/60 text-black/60"
+      : "dark:text-gray-300 text-gray-900";
+
+  return `${fontColor} ${classes}`;
+};
+
+const getElementFromMap = (
+  x = "default"
+): { element: string; classes: string } =>
+  ({
+    h1: {
+      element: "h1",
+      classes: withBaseStyles("text-5xl font-bold"),
+    },
+    h2: {
+      element: "h2",
+      classes: withBaseStyles("text-4xl font-bold"),
+    },
+    h3: {
+      element: "h3",
+      classes: withBaseStyles("text-3xl font-bold"),
+    },
+    h4: {
+      element: "h4",
+      classes: withBaseStyles("text-2xl font-bold"),
+    },
+    h5: {
+      element: "h5",
+      classes: withBaseStyles("text-xl font-bold"),
+    },
+    h6: {
+      element: "h6",
+      classes: withBaseStyles("text-lg font-bold"),
+    },
+    subtitle1: {
+      element: "h6",
+      classes: withBaseStyles("text-lg font-medium"),
+    },
+    subtitle2: {
+      element: "h6",
+      classes: withBaseStyles("text-lg font-medium"),
+    },
+    body1: {
+      element: "p",
+      classes: withBaseStyles("text-base"),
+    },
+    body2: {
+      element: "p",
+      classes: withBaseStyles("text-sm"),
+    },
+    caption: {
+      element: "p",
+      classes: withBaseStyles("text-xs"),
+    },
+    default: {
+      element: "span",
+      classes: withBaseStyles("text-base"),
+    },
+  }[x]);
+
+const { element, classes } = getElementFromMap(variant);
+---
+
+<element class={classes}><slot /></element>

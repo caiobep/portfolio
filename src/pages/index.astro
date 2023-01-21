@@ -1,43 +1,46 @@
-<html lang="en">
+---
+import LinkButton from "../components/LinkButton.astro";
+import Typography from "../components/Typography.astro";
+---
+
+<html lang="en" class="dark:bg-black bg-white dark:text-gray-300">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="currentColor" />
     <title>Tangent Lines</title>
   </head>
 
-  <body>
-    <navbar class="p-4 flex flex-row justify-between dark:bg-black">
-      <a href="/">Tangent Lines</a>
-      <ul class="flex flex-row gap-4">
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/podcasts">Podcasts</a></li>
-        <li><a href="/talks">Talks</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li>
-          <span class="search-icon flex flex-row gap-4"> 🔍</span>
-        </li>
+  <body class="px-[4rem] max-w-[64rem] mx-auto transition-all duration-300">
+    <navbar
+      class="py-4 flex flex-row justify-between dark:text-gray-300 text-gray-900 font-medium"
+    >
+      <header class="pt-2 text-xl dark:hover:text-white">
+        <a href="/"> Caio Amaral</a>
+      </header>
+
+      <ul class="flex flex-row gap-1">
+        <li><LinkButton href="/about" title="About Me" /></li>
+        <li><LinkButton href="/talks" title="Talks" /></li>
+        <li><LinkButton href="/posts" title="Posts" /></li>
+        <li><LinkButton href="#" title="🔍" /></li>
       </ul>
     </navbar>
 
-    <main>
-      <div
-        class="h-[400px] m-8 rounded-xl bg-white/10 p-8 flex flex-row align-middle justify-center max-w-[900px]"
-      >
-        <div class="w-[60%]">
-          <h1 class="text-5xl font-bold">Tangent Lines</h1>
-          <p class="text-white/70">
-            A blog about software engineering, design, and the intersection of
-            the two.
-          </p>
-        </div>
+    <main class="flex gap-2 flex-col mt-20 gap-[6em]">
+      <div class="mx-auto flex gap-2 flex-col justify-center align-middle">
+        <span class="dark:text-white/60 text-black/60">Hello, my name is</span>
+        <h1 class="text-6xl font-bold">
+          Caio <span class="opacity-10"> Amaral Corrêa</span>
+        </h1>
+        <p class="dark:text-white/60 text-black/60 max-w-[70%]">
+          This is the place where I share my learnings, projects, thoughts and
+          ideas, while I build things to help human/computer interactions.
+        </p>
+      </div>
 
-        <div class="w-[30%]">
-          <img
-            src="https://github.com/caiobep.png"
-            class="rounded-full w-48 h-48"
-          />
-        </div>
+      <div>
+        <Typography variant="h3">Projects</Typography>
       </div>
     </main>
 
@@ -55,10 +58,6 @@
       }
 
       @media (prefers-color-scheme: dark) {
-        body {
-          background-color: #000;
-          color: #fff;
-        }
       }
     </style>
   </body>
