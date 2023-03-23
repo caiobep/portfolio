@@ -13,74 +13,76 @@ export interface Props {
     | "body2"
     | "caption";
   color?: "primary" | "secondary";
+  class?: string;
 }
 
-const { variant, color, children } = Astro.props;
+const { variant, color } = Astro.props;
 
 const withBaseStyles = (classes: string) => {
-  const fontColor =
-    color === "primary"
-      ? "dark:text-white/60 text-black/60"
-      : "dark:text-gray-300 text-gray-900";
+  const fontColor = {
+    primary: "dark:text-gray-300 text-gray-900",
+    secondary: "dark:text-white/60 text-black/60",
+    default: "",
+  }[color || "default"];
 
-  return `${fontColor} ${classes}`;
+  return `${fontColor} ${classes} ${Astro.props?.class || ""}`;
 };
 
-type ElementDefinition = { element: string; classes: string } | undefined;
+type ElementDefinition = { Element: string; classes: string };
 
 const getElementFromMap = (x = "default"): ElementDefinition =>
   ({
     h1: {
-      element: "h1",
-      classes: withBaseStyles("text-5xl font-bold"),
+      Element: "h1",
+      classes: withBaseStyles("text-6xl font-bold"),
     },
     h2: {
-      element: "h2",
+      Element: "h2",
       classes: withBaseStyles("text-4xl font-bold"),
     },
     h3: {
-      element: "h3",
+      Element: "h3",
       classes: withBaseStyles("text-3xl font-bold"),
     },
     h4: {
-      element: "h4",
+      Element: "h4",
       classes: withBaseStyles("text-2xl font-bold"),
     },
     h5: {
-      element: "h5",
+      Element: "h5",
       classes: withBaseStyles("text-xl font-bold"),
     },
     h6: {
-      element: "h6",
+      Element: "h6",
       classes: withBaseStyles("text-lg font-bold"),
     },
     subtitle1: {
-      element: "h6",
+      Element: "h6",
       classes: withBaseStyles("text-lg font-medium"),
     },
     subtitle2: {
-      element: "h6",
+      Element: "h6",
       classes: withBaseStyles("text-lg font-medium"),
     },
     body1: {
-      element: "p",
+      Element: "p",
       classes: withBaseStyles("text-base"),
     },
     body2: {
-      element: "p",
+      Element: "p",
       classes: withBaseStyles("text-sm"),
     },
     caption: {
-      element: "p",
+      Element: "p",
       classes: withBaseStyles("text-xs"),
     },
     default: {
-      element: "span",
+      Element: "span",
       classes: withBaseStyles("text-base"),
     },
   }[x] as ElementDefinition);
 
-const { element, classes } = getElementFromMap(variant);
+const { Element, classes } = getElementFromMap(variant) as ElementDefinition;
 ---
 
-<element class={classes}><slot /></element>
+<Element class={classes}><slot /></Element>
