@@ -1,0 +1,13 @@
+---
+export interface Props {
+icon: string
+}
+
+const { icon } = Astro.props
+
+---
+
+<span class="rounded-xl bg-gray-100 text-black text-xs p-2 grayscale">
+  <i>{icon}</i>
+  <slot />
+</span>
