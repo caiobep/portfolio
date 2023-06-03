@@ -1,164 +1,51 @@
 ---
-import ImageLink from "../components/ImageLink.astro";
+
+import Layout from '../layouts/Layout.astro'
 import LinkButton from "../components/LinkButton.astro";
 import Typography from "../components/Typography.astro";
+import CompaniesIveWorkedWith from '../components/CompaniesIveWorkedWith.astro'
 
 const yearsAsSoftwareEngineer = new Date().getFullYear() - 2016;
 ---
 
-<html lang="en" class="dark:bg-black bg-gray/50 dark:text-gray-300">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="currentColor" />
-    <title>Caio Online</title>
-  </head>
+<Layout title="Caio Amaral">
+  <main class="flex gap-2 flex-col mt-5">
+    <section class="px-11 py-48 sm:h-[80vh] sm:max-h-[800px] md:h[60vh]">
+      <Typography variant="h1"
+        class="font-bold max-w-[70%] md:max-w-[90%] animate-slideUpFadeIn duration-1000 delay-1000">
+        Engineer and designer using software to augment human abilities
+      </Typography>
+    </section>
 
-  <body class="px-[4rem] max-w-[104rem] mx-auto transition-all duration-300">
-    <navbar
-      class="py-4 flex flex-row justify-between dark:text-gray-300 text-gray-900 font-medium"
-    >
-      <header class="pt-2 text-xl dark:hover:text-white">
-        <a href="/"> Caio Amaral</a>
-      </header>
+    <section class="px-11 py-48 flex flex-col md:flex-row items-center gap-9">
+      <div class="w-[100%] md:w-[160%] animate__animated animate__fadeInLeft">
+        <img src="photos/profile.png" alt="image" style="max-width:100%;" />
+      </div>
 
-      <ul class="flex flex-row gap-1">
-        <li><LinkButton href="/about" title="About Me" /></li>
-        <li><LinkButton href="/posts" title="Posts" /></li>
-        <li><LinkButton href="#" title="O" /></li>
-      </ul>
-    </navbar>
+      <div class="animate__animated animate__fadeInRight">
+        <Typography variant="body1" class="text-xl">
+          For the last {yearsAsSoftwareEngineer} years, I have been using software
+          to leverage people's productivity and creativity by analyzing and assessing
+          opportunities. As a kid, I was always fascinated by how UIs and software
+          could teach you how to do things without any prior knowledge. Ever since,
+          I've decided to dedicate my career to
+          <b> Human Computer Interaction</b>
+          helping better integrate computers and humans, and hopefully sparking
+          the same feeling I've got in newer generations. On my way I've also developed
+          a passion for <b>Design</b>, <b>Productivity</b>, <b>History</b>
+          and <a href="/posts"> many other topics</a>
 
-    <main class="flex gap-2 flex-col mt-5">
-      <section class="px-11 py-48 sm:h-[100vh] sm:max-h-[800px]">
-        <Typography variant="h1" class="font-bold max-w-[70%] md:max-w-[90%]">
-          Engineer and designer using software to augment human abilities
+          <br />
+          <br />
+
+          I really believe that good software it's good for <b>everyone</b> so
+          focus on building <b>high-quality delightful</b> to use <b>accessible</b> applications that cohesively
+          integrate
+          with the user's workflow.
         </Typography>
-      </section>
+      </div>
+    </section>
 
-      <section class="px-11 py-48 flex flex-col md:flex-row items-center gap-9">
-        <div class="w-[100%] md:w-[160%]">
-          <img src="photos/profile.png" alt="image" style="max-width:100%;" />
-        </div>
-
-        <div class="">
-          <Typography variant="body1" class="text-xl">
-            For the last {yearsAsSoftwareEngineer} years, I have been using software
-            to leverage people's productivity and creativity by analyzing and assessing
-            opportunities. As a kid, I was always fascinated by how UIs and software
-            could teach you how to do things without any prior knowledge. Ever since,
-            I've decided to dedicate my career to
-            <b> Human Computer Interaction</b>
-            helping better integrate computers and humans, and hopefully sparking
-            the same feeling I've got in newer generations. On my way I've also developed
-            a passion for <b>Design</b>, <b>Productivity</b>, <b>History</b>
-            and <a href="/posts"> many other topics</a>
-
-            <br />
-            <br />
-
-            I really believe that good software it's good for <b>everyone</b> so
-            focus on building <b>high-quality delightful</b> to use <b
-              >accessible</b
-            > applications that cohesively integrate with the user's workflow.
-          </Typography>
-        </div>
-      </section>
-
-      <section class="">
-        <Typography variant="h2" class="text-center">
-          Companies I've worked with in the past
-        </Typography>
-
-        <div
-          class="grayscale dark:invert flex flex-wrap justify-center gap-5 my-9 mx-0"
-        >
-          <ImageLink
-            href="https://www.bancobmg.com.br"
-            src="photos/clients/bmg.png"
-            alt="bmg"
-          />
-          <ImageLink
-            href="https://embraer.com"
-            src="photos/clients/embraer.png"
-            alt="embraer"
-          />
-          <ImageLink
-            href="https://www.itv.com"
-            src="photos/clients/itv.png"
-            alt="itv"
-          />
-          <ImageLink
-            href="https://www.lambda3.com.br"
-            src="photos/clients/lambda3.png"
-            alt="lambda3"
-          />
-          <ImageLink
-            href="https://www.linkedin.com/company/resource-it-solutions/"
-            src="photos/clients/resource.png"
-            alt="resource"
-          />
-          <ImageLink
-            href="https://www.santander.com.br"
-            src="photos/clients/santander.png"
-            alt="santander"
-          />
-          <ImageLink
-            href="https://www.ticket.com.br"
-            src="photos/clients/ticket.png"
-            alt="ticket"
-          />
-          <ImageLink
-            href="https://tmamerica.com/"
-            src="photos/clients/tokio-marine.png"
-            alt="tokio marine"
-          />
-          <ImageLink
-            href="https://vigil.global"
-            src="photos/clients/vigil.png"
-            alt="vigil"
-          />
-          <ImageLink
-            href="https://xpinc.com"
-            src="photos/clients/xpinc.png"
-            alt="xpinc"
-          />
-          <ImageLink
-            href="https://xpi.com.br"
-            src="photos/clients/xpprivate.png"
-            alt="xp private"
-          />
-          <ImageLink
-            href="https://xpi.us"
-            src="photos/clients/xp securities.svg"
-            alt="xp securities"
-          />
-        </div>
-      </section>
-
-      <footer></footer>
-
-      <style>
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
-
-        body {
-          display: flex;
-          flex-direction: column;
-          min-height: 100vh;
-        }
-
-        .color-secondary {
-          @apply dark:text-white/60 text-black/60;
-        }
-
-        @media (prefers-color-scheme: dark) {
-          html {
-            background-color: #fff;
-          }
-        }
-      </style>
-    </main>
-  </body>
-</html>
+    <CompaniesIveWorkedWith />
+  </main>
+</Layout>

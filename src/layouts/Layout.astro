@@ -1,35 +1,91 @@
 ---
+import LinkButton from '../components/LinkButton.astro'
+import Typography from '../components/Typography.astro'
+
 export interface Props {
-	title: string;
+title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" class="dark:bg-black bg-gray/50 dark:text-gray-300">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="currentColor" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="px-[4rem] max-w-[104rem] mx-auto transition-all duration-300">
+  <navbar class="py-4 flex flex-row justify-between dark:text-gray-300 text-gray-900 font-medium">
+    <header class="pt-2 text-xl dark:hover:text-white">
+      <a href="/" class="animate__animated animate__bounceInLeft">
+        Caio Amaral
+      </a>
+    </header>
+
+    <ul class="flex flex-row gap-1 animate__animated animate__fadeInRight">
+      <li>
+        <LinkButton href="/about" title="About Me" />
+      </li>
+      <li>
+        <LinkButton href="/posts" title="Posts" />
+      </li>
+      <li>
+        <LinkButton href="#" title="O" />
+      </li>
+    </ul>
+  </navbar>
+
+
+  <main>
+    <slot />
+  </main>
+
+
+
+  <footer> </footer>
+
+  <style is:global>
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @keyframes slideUpFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(1rem);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .color-secondary {
+      /* @apply dark: text-white/60 text-black/60; */
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html {
+        background-color: #fff;
+      }
+    }
+  </style>
+
+
+</body>
+
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>
