@@ -1,13 +1,13 @@
 ---
 export interface Props {
-icon: string
+  icon: string
+  id: string
 }
 
-const { icon } = Astro.props
-
+const { icon, id } = Astro.props
 ---
 
-<span class="rounded-xl bg-gray-100 text-black text-xs p-2 grayscale">
+<button id={id} class="chip rounded-xl bg-gray-100 text-black text-xs p-2 grayscale cursor-pointer hover:scale-110 transition-all">
   <i>{icon}</i>
   <slot />
-</span>
+</button>

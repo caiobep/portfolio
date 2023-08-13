@@ -1,0 +1,18 @@
+---
+import Typography from '../components/Typography.astro'
+
+export interface PageSectionProps {
+  title: string
+}
+
+const { title } = Astro.props
+
+---
+
+<section class="flex flex-col gap-14 mb-20">
+  <Typography variant="h2" class="text-5xl text-center">
+    {title}
+  </Typography>
+
+  <slot />
+</section>

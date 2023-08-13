@@ -1,0 +1,70 @@
+---
+import Typography from './Typography.astro'
+
+---
+
+<footer class="flex flex-col items-center justify-center gap-10
+  py-20 px-11">
+
+  <div class="flex gap-20">
+
+    <div>
+      <Typography variant="body1" class="font-bold my-1">
+        Sitemap
+      </Typography>
+
+      <ul class="flex-col gap-3 text-sm">
+        <li class="hover:underline"><a href="/blog" target="_blank">Blog</a></li>
+        <li class="hover:underline"><a href="/podcasts" target="_blank">Podcasts</a></li>
+        <li class="hover:underline"><a href="/projects" target="_blank">Projects</a></li>
+        <li class="hover:underline"><a href="/about" target="_blank">About Me</a></li>
+        <li class="hover:underline"><a href="/talk-material" target="_blank">Talk Material</a></li>
+        <li class="hover:underline"><a href="/resume" target="_blank">Resume</a></li>
+      </ul>
+    </div>
+
+
+    <div>
+      <Typography variant="body1" class="font-bold my-1">
+        Social
+      </Typography>
+
+      <ul class="flex-col gap-3 text-sm">
+        <li class="hover:underline"><a href="https://twitter.com/caicorre" target="_blank"> 𝕏 / Twitter </a></li>
+        <li class="hover:underline"><a href="https://mstdn.social/@caicorre" target="_blank"> Mastodon </a></li>
+        <li class="hover:underline"><a href="https://github.com/caiobep" target="_blank"> Github </a></li>
+        <li class="hover:underline"><a href="https://ca.linkedin.com/in/caiobep/" target="_blank"> LinkedIn </a></li>
+        <li class="hover:underline"><a href="https://letterboxd.com/caiobep/" target="_blank"> Letterboxd </a></li>
+      </ul>
+    </div>
+
+
+    <div>
+      <Typography variant="body1" class="font-bold my-1">
+        RSS Feed
+      </Typography>
+
+      <ul class="flex-col gap-3 text-sm">
+        <li class="hover:underline"><a href="/rss" target="_blank">Complete Feed</a></li>
+        <li class="hover:underline"><a href="/rss/podcasts" target="_blank">Podcasts</a></li>
+        <li class="hover:underline"><a href="/rss/tech" target="_blank">Technical</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <Typography variant="body1" class="font-bold my-1">
+        Contact
+      </Typography>
+
+      <ul class="flex-col gap-3 text-sm">
+        <li class="hover:underline"><a href="mailto:caiobep@me.com" target="_blank">Email</a></li>
+        <li class="hover:underline"><a href="https://fantastical.app/caio/20-minute-chat-with-caio" target="_blank">20 Minutes Chat</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <Typography variant="body2" class="text-center">
+    © {new Date().getFullYear()} Caio Amaral Corrêa
+  </Typography>
+</footer>

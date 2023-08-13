@@ -2,21 +2,20 @@
 import Typography from './Typography.astro'
 
 interface Props {
-title: string
-tags: string[]
-summary: string
+  title: string
+  tags: string[]
+  summary: string
 }
 
 const { title, tags, summary } = Astro.props
 
 ---
 
-<div
-  class="posts max-w-md border border-gray-500 rounded-xl p-4 flex flex-col gap-2 cursor-pointer hover:shadow-white transition-all hover:scale-105">
+<div class="posts max-w-md border border-gray-500 rounded-xl p-4 flex flex-col gap-2 cursor-pointer hover:shadow-white transition-all hover:scale-105">
   <Typography variant="h5">{title}</Typography>
 
-  <div class="flex gap-2">
-    {tags.map(t => <span class="border rounded-xl border-gray-500 p-1">{t}</span>)}
+  <div class="flex gap-1">
+    {tags.map(t => <span class="border rounded-2xl border-gray-500 px-2 py-1 text-xs">{t}</span>)}
   </div>
 
   <div class="text-gray-400">

@@ -1,6 +1,7 @@
 ---
 
 import Layout from '../layouts/Layout.astro'
+import PageSection from "../layouts/PageSection.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Typography from "../components/Typography.astro";
 import CompaniesIveWorkedWith from '../components/CompaniesIveWorkedWith.astro'
@@ -9,21 +10,24 @@ const yearsAsSoftwareEngineer = new Date().getFullYear() - 2016;
 ---
 
 <Layout title="Caio Amaral">
-  <main class="flex gap-2 flex-col mt-5">
-    <section class="px-11 py-48 sm:h-[80vh] sm:max-h-[800px] md:h[60vh]">
+  <main class="flex flex-col mt-5 gap-20">
+
+    <section class="px-11 sm:h-[80vh] sm:max-h-[800px] md:h[80vh] max-h-[90vh]">
       <Typography variant="h1"
-        class="font-bold max-w-[70%] md:max-w-[90%] animate-slideUpFadeIn duration-1000 delay-1000">
-        Engineer and designer using software to augment human abilities
+        class="font-bold max-w-[70%] md:max-w-[70%] animate-slideUpFadeIn duration-1000 delay-1000 pt-[25%]">
+        Augmenting human potential through software
       </Typography>
     </section>
 
-    <section class="px-11 py-48 flex flex-col md:flex-row items-center gap-9">
-      <div class="w-[100%] md:w-[160%] animate__animated animate__fadeInLeft">
-        <img src="photos/profile.png" alt="image" style="max-width:100%;" />
+    <section class="px-11 py-48 flex flex-col md:flex-row justify-center
+      items-center gap-20">
+      <div class="max-w-[30vw] animate__animated animate__fadeInLeft
+        rounded">
+        <img src="photos/profile.png" alt="Caio's Profile Picture" style="max-width:100%;" />
       </div>
 
       <div class="animate__animated animate__fadeInRight">
-        <Typography variant="body1" class="text-xl">
+        <Typography variant="body1" class="text-xl max-w-[40vw]">
           For the last {yearsAsSoftwareEngineer} years, I have been using software
           to leverage people's productivity and creativity by analyzing and assessing
           opportunities. As a kid, I was always fascinated by how UIs and software
@@ -46,6 +50,28 @@ const yearsAsSoftwareEngineer = new Date().getFullYear() - 2016;
       </div>
     </section>
 
-    <CompaniesIveWorkedWith />
+    <section class="flex flex-col gap-14 mb-20">
+      <Typography variant="h2" class="text-5xl text-center">
+        Trusted by Industry Leaders
+      </Typography>
+
+      <CompaniesIveWorkedWith />
+    </section>
+
+    <section class="flex flex-col gap-14 mb-20">
+      <Typography variant="h2" class="text-center">
+        Let's work together
+      </Typography>
+
+      <Typography variant="body1" class="text-center lg:max-w-[40vw] lg:ml-auto lg:mr-auto">
+        Got a project in mind? Need help leveraging your team productivity? Want
+        to move your business to the next level? Trying to excell through the
+        digital transformation? <a href="mailto:a.com">Let's chat!</a>
+      </Typography>
+
+      <LinkButton href="https://fantastical.app/caio/20-minute-chat-with-caio" class="w-full md:w-auto" title="Let's get in touch" />
+    </section>
+
   </main>
+
 </Layout>

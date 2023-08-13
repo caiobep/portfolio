@@ -8,6 +8,6 @@ export interface Props {
 const { href, src, alt } = Astro.props;
 ---
 
-<a href={href} class="block">
-  <img src={src} alt={alt} class="h-[40px]" />
+<a href={href} class="flex">
+  <img src={src} alt={alt} class="object-contain max-w-[140px] max-h-[80px]" />
 </a>
