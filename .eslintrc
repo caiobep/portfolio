@@ -15,9 +15,13 @@
   },
   "plugins": [
     "@typescript-eslint",
-    "astro"
+    "astro",
+    "prettier"
   ],
-  "rules": {},
+  "rules": {
+    "space-before-function-paren": "off",
+    "comma-dangle": "off"
+  },
   "overrides": [
     {
       "files": [
