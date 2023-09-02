@@ -1,8 +1,8 @@
 ---
+import { ViewTransitions } from 'astro:transitions'
 import LinkButton from '../components/LinkButton.astro'
 import Typography from '../components/Typography.astro'
 import Footer from '../components/Footer.astro'
-import { ViewTransitions } from 'astro:transitions'
 
 export interface Props {
   title: string
@@ -22,7 +22,6 @@ const { title } = Astro.props
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="mask-icon" href="favicon.svg" color="#FFF" />
   <title>{title}</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <ViewTransitions />
 </head>
 
@@ -35,15 +34,15 @@ const { title } = Astro.props
     </header>
 
     <ul class="flex flex-row gap-1 animate__animated animate__fadeInRight">
-      <li>
-        <LinkButton href="/about" title="About Me" />
-      </li>
+      <!-- <li> -->
+      <!--   <LinkButton href="/about" title="About Me" /> -->
+      <!-- </li> -->
       <li>
         <LinkButton href="/posts" title="Posts" />
       </li>
-      <li>
-        <LinkButton href="#" title="Search" />
-      </li>
+      <!-- <li> -->
+      <!--   <LinkButton href="#" title="Search" /> -->
+      <!-- </li> -->
     </ul>
   </navbar>
 
@@ -55,9 +54,6 @@ const { title } = Astro.props
   <Footer />
 
   <style is:global>
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
 
     @keyframes slideUpFadeIn {
       0% {

@@ -1,0 +1,63 @@
+---
+import { getCollection } from "astro:content"
+import Layout from "../../layouts/Layout.astro"
+import Typography from "../../components/Typography.astro"
+import Chip from "../../components/Chip.astro"
+import PostPreview from "../../components/PostPreview.astro"
+
+const posts = (await getCollection("blog-posts"))
+  .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+---
+
+<Layout title="Caio's Posts" class="p-5 flex gap-10">
+
+  <section class="pt-10 mb-4">
+    <Typography variant="h1">Welcome digital home</Typography>
+    <p class="dark:text-gray-400 text-gray-600 mt-2">Here I share thoughts on entrepreneurship, engineering, finance and
+      more</p>
+  </section>
+
+  <section class="my-8">
+    <input type="text" placeholder="Search (⌘+K)" class="p-2 border-none
+      focus:outline-none focus:border focus:border-bottom focus:border-gray-500
+      bg-transparent w-[100%]" id="search-post"/>
+  </section>
+
+
+  <section class="posts rounded-xl p-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-[100%]">
+    {posts.map(p => <PostPreview title={p.data.title} summary={p.data.summary} date={p.data.date} pathname={p.slug} />)}
+  </section>
+
+</Layout>
+
+<script is:global>
+  const postsContainer = document.querySelector(".posts")
+  const searchInput = document.querySelector("input#search-post")
+
+  searchInput.addEventListener("keyup", (e) => {
+    console.log(e.target.value)
+    const query = e.target.value.toLowerCase()
+    const posts = postsContainer.querySelectorAll(".post")
+
+    posts.forEach(post => {
+      const content = post.dataset.title.toLowerCase()
+
+      if (content.includes(query)) {
+        post.classList.remove("hidden")
+      } else {
+        post.classList.add("hidden")
+      }
+    })
+  })
+
+  window.addEventListener("keydown", (e) => {
+    const command = e.metaKey || e.ctrlKey
+    if (command && e.key === "k") {
+      e.preventDefault()
+      searchInput.focus()
+    }
+  })
+
+
+</script>
+

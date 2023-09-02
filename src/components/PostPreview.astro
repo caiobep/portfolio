@@ -2,23 +2,45 @@
 import Typography from './Typography.astro'
 
 interface Props {
+  pathname: string
   title: string
-  tags: string[]
+  date?: string
   summary: string
 }
 
-const { title, tags, summary } = Astro.props
+const { title, summary,  pathname, date } = Astro.props
 
+const postUrl = `/posts/${pathname}`
+const titleTransitionName = `${pathname}-title`
+const dateFieldId = `${pathname}-date`
+
+const optmisticDate = new Date(date).toLocaleDateString()
+const titleName = title.substring(0, 55) + (title.length > 60 ? '...' : '')
+const content = `${title} ${summary}`
 ---
 
-<div class="posts max-w-md border border-gray-500 rounded-xl p-4 flex flex-col gap-2 cursor-pointer hover:shadow-white transition-all hover:scale-105">
-  <Typography variant="h5">{title}</Typography>
+<a href={postUrl} alt={`open blog post ${title}`} class="post" data-title={title}>
+  <div class="max-w-md h-40 border hover:border-gray-200 dark:border-gray-800 border-gray-300 rounded-lg p-4 flex flex-col gap-2 cursor-pointer hover:shadow-white transition-all hover:scale-105"> 
 
-  <div class="flex gap-1">
-    {tags.map(t => <span class="border rounded-2xl border-gray-500 px-2 py-1 text-xs">{t}</span>)}
-  </div>
+    <div class="flex flex-row justify-between">
+      <span id={dateFieldId} class="date text-gray-500 text-bold text-xs">Posted on {optmisticDate}</span>
+      <!-- <span class="date text-gray-500 text-bold text-xs">5 min read</span> -->
+    </div>
 
-  <div class="text-gray-400">
-    {summary}
+    <Typography variant="h5" transition:name={titleTransitionName}>{titleName}</Typography>
+
+    <div class="text-gray-400">
+      {summary}
+    </div>
   </div>
-</div>
+</a>
+
+<script define:vars={{ dateFieldId, date}} is:inline>
+const dateEl = document.getElementById(dateFieldId)
+const parsedDateStr = "Posted on " + new Date(date).toLocaleDateString()
+
+if (dateEl.innerHTML !== parsedDateStr) {
+  dateEl.innerHTML = parsedDateStr
+}
+</script>
+

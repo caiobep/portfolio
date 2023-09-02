@@ -1,0 +1,42 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content'
+import Layout from "../../layouts/Layout.astro"
+import Typography from '../../components/Typography.astro'
+import Chip from '../../components/Chip.astro'
+import BlogPost from "../../layouts/BlogPost.astro"
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog-posts')
+
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post }
+  }))
+}
+
+const { post: { render, data:{ id, title, date, tags }, slug} } = Astro.props;
+const { Content } = await render()
+
+const titleTransitionName = `${slug}-title`
+---
+
+<Layout>
+  <section class="p-6 mx-auto max-w-[80vw] md:max-w-[60vw] flex flex-col gap-6  justify-items-center boder-red-500">
+    <header class="flex flex-col gap-2">
+      <Typography variant="h1" transition:name={titleTransitionName} transition:animate="morph" class="text-4xl font-bold">{title}</Typography>
+    </header>
+
+
+    <article class="content font-mono max-w-[60vw] leading-5 flex flex-col gap-6 mx-auto">
+      <Content />
+    </article>
+  </section>
+</Layout>
+
+
+<style is:inline>
+   .content  a {
+    text-decoration: underline;
+  }
+
+</style>

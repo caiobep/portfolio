@@ -16,7 +16,7 @@ export interface Props {
   class?: string;
 }
 
-const { variant, color } = Astro.props;
+const { variant, color, class, ...otherProps } = Astro.props;
 
 const withBaseStyles = (classes: string) => {
   const fontColor = {
@@ -85,4 +85,4 @@ const getElementFromMap = (x = "default"): ElementDefinition =>
 const { Element, classes } = getElementFromMap(variant) as ElementDefinition;
 ---
 
-<Element class={classes}><slot /></Element>
+<Element class={classes} {...otherProps}><slot /></Element>
