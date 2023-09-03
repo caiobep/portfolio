@@ -16,5 +16,6 @@
   "proseWrap": "preserve",
   "htmlWhitespaceSensitivity": "css",
   "vueIndentScriptAndStyle": false,
-  "endOfLine": "auto"
+  "endOfLine": "auto",
+  "insertFinalNewline": true
 }

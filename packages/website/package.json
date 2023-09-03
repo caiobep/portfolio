@@ -1,0 +1,42 @@
+{
+  "name": "website",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "Caio Amaral Correa <caiobep@me.com>",
+  "private": false,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "run-p test:static:*",
+    "test:static": "run-p test:static:*",
+    "test:static:typescript": "tsc --noEmit",
+    "test:static:eslint": "eslint --ext .js,.jsx,.ts,.tsx src"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "~1.0.0",
+    "@astrojs/rss": "~3.0.0",
+    "@astrojs/sitemap": "~3.0.0",
+    "@astrojs/tailwind": "~5.0.0",
+    "astro": "~3.0.2",
+    "tailwindcss": "~3.3.3"
+  },
+  "devDependencies": {
+    "@notionhq/client": "~2.2.12",
+    "@typescript-eslint/eslint-plugin": "~6.5.0",
+    "@typescript-eslint/parser": "~6.5.0",
+    "astro-eslint-parser": "~0.15.0",
+    "eslint": "~8.48.0",
+    "eslint-config-standard": "~17.1.0",
+    "eslint-plugin-astro": "~0.29.0",
+    "eslint-plugin-import": "~2.28.1",
+    "eslint-plugin-n": "~16.0.2",
+    "eslint-plugin-prettier": "~5.0.0",
+    "eslint-plugin-promise": "~6.1.1",
+    "npm-run-all": "~4.1.5",
+    "ts-node": "~10.9.1",
+    "typescript": "~5.2.2"
+  }
+}

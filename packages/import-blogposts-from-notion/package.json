@@ -1,0 +1,26 @@
+{
+  "name": "import-blogposts-from-notion",
+  "version": "0.0.0",
+  "description": "",
+  "engine": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "npx esbuild ./src/index.ts --bundle --platform=node --target=node20 --minify --outfile=./dist/index.js",
+    "start": "node -r dotenv/config ./dist/index.js",
+    "lint": "eslint --cache --ext .ts,js,tsx,jsx .",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "node --loader tsm --test ./src/**/*.test.*",
+    "test:watch": "npm run test -- --watch"
+  },
+  "devDependencies": {
+    "@notionhq/client": "~2.2.12",
+    "dotenv": "~16.3.1",
+    "esbuild": "~0.19.2",
+    "notion-to-md": "~3.1.1",
+    "tsm": "~2.3.0",
+    "typescript": "~5.2.2"
+  },
+  "author": "Caio Amaral Corrêa <caiobep@me.com> (https://github.com/caiobep)",
+  "license": "MIT"
+}

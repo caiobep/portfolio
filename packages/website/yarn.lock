@@ -5039,6 +5039,23 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
+turbo-darwin-arm64@1.10.13:
+  version "1.10.13"
+  resolved "https://registry.npmjs.org/turbo-darwin-arm64/-/turbo-darwin-arm64-1.10.13.tgz"
+  integrity sha512-eMoJC+k7gIS4i2qL6rKmrIQGP6Wr9nN4odzzgHFngLTMimok2cGLK3qbJs5O5F/XAtEeRAmuxeRnzQwTl/iuAw==
+
+turbo@~1.10.13:
+  version "1.10.13"
+  resolved "https://registry.npmjs.org/turbo/-/turbo-1.10.13.tgz"
+  integrity sha512-vOF5IPytgQPIsgGtT0n2uGZizR2N3kKuPIn4b5p5DdeLoI0BV7uNiydT7eSzdkPRpdXNnO8UwS658VaI4+YSzQ==
+  optionalDependencies:
+    turbo-darwin-64 "1.10.13"
+    turbo-darwin-arm64 "1.10.13"
+    turbo-linux-64 "1.10.13"
+    turbo-linux-arm64 "1.10.13"
+    turbo-windows-64 "1.10.13"
+    turbo-windows-arm64 "1.10.13"
+
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
   resolved "https://registry.npmjs.org/type-check/-/type-check-0.4.0.tgz"
