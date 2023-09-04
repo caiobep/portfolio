@@ -7,7 +7,8 @@
   },
   "scripts": {
     "build": "npx esbuild ./src/index.ts --bundle --platform=node --target=node20 --minify --outfile=./dist/index.js",
-    "start": "node -r dotenv/config ./dist/index.js",
+    "build-and-run": "npm run build && npm start -- $1",
+    "start": "node ./dist/index.js",
     "lint": "eslint --cache --ext .ts,js,tsx,jsx .",
     "lint:fix": "npm run lint -- --fix",
     "test": "node --loader tsm --test ./src/**/*.test.*",

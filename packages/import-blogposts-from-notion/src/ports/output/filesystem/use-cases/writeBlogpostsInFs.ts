@@ -28,7 +28,7 @@ export async function writeBlogpostInFs(
   const fileName = getFsSafeNameFromStr(blogpost.title)
   const postHeader = recordToPageHeaderAdapter(headers)
 
-  const fileContents = postHeader + '/n' + content
+  const fileContents = `${postHeader} \n ${content}`
 
   try {
     await fs.writeFile(path.join(directory, fileName), fileContents)

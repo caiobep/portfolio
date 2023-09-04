@@ -193,23 +193,23 @@ declare module 'astro:content' {
   collection: "blog-posts";
   data: InferEntrySchema<"blog-posts">
 } & { render(): Render[".md"] };
-"Arrays.md": {
-	id: "Arrays.md";
-  slug: "arrays";
-  body: string;
-  collection: "blog-posts";
-  data: InferEntrySchema<"blog-posts">
-} & { render(): Render[".md"] };
-"Big_O_Notation.md": {
-	id: "Big_O_Notation.md";
-  slug: "big_o_notation";
-  body: string;
-  collection: "blog-posts";
-  data: InferEntrySchema<"blog-posts">
-} & { render(): Render[".md"] };
 "Borrowed_Creativity.md": {
 	id: "Borrowed_Creativity.md";
   slug: "borrowed_creativity";
+  body: string;
+  collection: "blog-posts";
+  data: InferEntrySchema<"blog-posts">
+} & { render(): Render[".md"] };
+"CS_Series.md": {
+	id: "CS_Series.md";
+  slug: "cs_series";
+  body: string;
+  collection: "blog-posts";
+  data: InferEntrySchema<"blog-posts">
+} & { render(): Render[".md"] };
+"CS_Series__Hash_Maps_vs_Objects_in_JavaScript.md": {
+	id: "CS_Series__Hash_Maps_vs_Objects_in_JavaScript.md";
+  slug: "cs_series__hash_maps_vs_objects_in_javascript";
   body: string;
   collection: "blog-posts";
   data: InferEntrySchema<"blog-posts">
@@ -221,9 +221,9 @@ declare module 'astro:content' {
   collection: "blog-posts";
   data: InferEntrySchema<"blog-posts">
 } & { render(): Render[".md"] };
-"Complexity_Analysis.md": {
-	id: "Complexity_Analysis.md";
-  slug: "complexity_analysis";
+"Computer_Science_Series_Parallelism.md": {
+	id: "Computer_Science_Series_Parallelism.md";
+  slug: "computer_science_series_parallelism";
   body: string;
   collection: "blog-posts";
   data: InferEntrySchema<"blog-posts">
@@ -259,20 +259,6 @@ declare module 'astro:content' {
 "GOTO_2019_•_An_Engineer's_Guide_To_Burnout_And_How_To_Hack_It_•_Tim_Duckett_-_YouTube.md": {
 	id: "GOTO_2019_•_An_Engineer's_Guide_To_Burnout_And_How_To_Hack_It_•_Tim_Duckett_-_YouTube.md";
   slug: "goto_2019__an_engineers_guide_to_burnout_and_how_to_hack_it__tim_duckett_-_youtube";
-  body: string;
-  collection: "blog-posts";
-  data: InferEntrySchema<"blog-posts">
-} & { render(): Render[".md"] };
-"Great_Home_Webcam_Video_Setup.md": {
-	id: "Great_Home_Webcam_Video_Setup.md";
-  slug: "great_home_webcam_video_setup";
-  body: string;
-  collection: "blog-posts";
-  data: InferEntrySchema<"blog-posts">
-} & { render(): Render[".md"] };
-"Hash_Maps_vs_Objects_in_JavaScript.md": {
-	id: "Hash_Maps_vs_Objects_in_JavaScript.md";
-  slug: "hash_maps_vs_objects_in_javascript";
   body: string;
   collection: "blog-posts";
   data: InferEntrySchema<"blog-posts">
@@ -326,13 +312,6 @@ declare module 'astro:content' {
   collection: "blog-posts";
   data: InferEntrySchema<"blog-posts">
 } & { render(): Render[".md"] };
-"Introduction.md": {
-	id: "Introduction.md";
-  slug: "introduction";
-  body: string;
-  collection: "blog-posts";
-  data: InferEntrySchema<"blog-posts">
-} & { render(): Render[".md"] };
 "Jack_Black.md": {
 	id: "Jack_Black.md";
   slug: "jack_black";
@@ -354,20 +333,6 @@ declare module 'astro:content' {
   collection: "blog-posts";
   data: InferEntrySchema<"blog-posts">
 } & { render(): Render[".md"] };
-"Logarithm.md": {
-	id: "Logarithm.md";
-  slug: "logarithm";
-  body: string;
-  collection: "blog-posts";
-  data: InferEntrySchema<"blog-posts">
-} & { render(): Render[".md"] };
-"Memory.md": {
-	id: "Memory.md";
-  slug: "memory";
-  body: string;
-  collection: "blog-posts";
-  data: InferEntrySchema<"blog-posts">
-} & { render(): Render[".md"] };
 "My_favorite_Apps_for_Traveling_Abroad.md": {
 	id: "My_favorite_Apps_for_Traveling_Abroad.md";
   slug: "my_favorite_apps_for_traveling_abroad";
@@ -385,13 +350,6 @@ declare module 'astro:content' {
 "PARA_System.md": {
 	id: "PARA_System.md";
   slug: "para_system";
-  body: string;
-  collection: "blog-posts";
-  data: InferEntrySchema<"blog-posts">
-} & { render(): Render[".md"] };
-"Parallelism.md": {
-	id: "Parallelism.md";
-  slug: "parallelism";
   body: string;
   collection: "blog-posts";
   data: InferEntrySchema<"blog-posts">
@@ -490,13 +448,6 @@ declare module 'astro:content' {
 "Uncle_Bob_Martin_-_The_Future_Of_Programming.md": {
 	id: "Uncle_Bob_Martin_-_The_Future_Of_Programming.md";
   slug: "uncle_bob_martin_-_the_future_of_programming";
-  body: string;
-  collection: "blog-posts";
-  data: InferEntrySchema<"blog-posts">
-} & { render(): Render[".md"] };
-"What_Are_Data_Structures.md": {
-	id: "What_Are_Data_Structures.md";
-  slug: "what_are_data_structures";
   body: string;
   collection: "blog-posts";
   data: InferEntrySchema<"blog-posts">

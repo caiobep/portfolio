@@ -7,11 +7,10 @@ export async function getPageContentsInMarkdown(
   const pageContents = await notionToMarkdownClient.pageToMarkdown(postId)
   const contentInMd = notionToMarkdownClient.toMarkdownString(pageContents)
 
-  return Object.values(contentInMd).join('\n')
+  return contentInMd.parent
 }
 
 export async function createNotionMarkdownExporter() {
   const notionMarkdownClient = createNotionToMarkdownClient()
-
   return (p: string) => getPageContentsInMarkdown(p, notionMarkdownClient)
 }
