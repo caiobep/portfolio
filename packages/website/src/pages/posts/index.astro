@@ -31,25 +31,26 @@ const posts = (await getCollection("blog-posts"))
 </Layout>
 
 <script is:global>
-  const postsContainer = document.querySelector(".posts")
-  const searchInput = document.querySelector("input#search-post")
+const postsContainer = document.querySelector(".posts")
+const searchInput = document.querySelector("input#search-post")
 
-  searchInput.addEventListener("keyup", (e) => {
-    console.log(e.target.value)
-    const query = e.target.value.toLowerCase()
-    const posts = postsContainer.querySelectorAll(".post")
+searchInput.addEventListener("keyup", (e) => {
+  console.log(e.target.value)
+  const query = e.target.value.toLowerCase()
+  const posts = postsContainer.querySelectorAll(".post")
 
-    posts.forEach(post => {
-      const content = post.dataset.title.toLowerCase()
+  posts.forEach(post => {
+    const content = post.dataset.title.toLowerCase()
 
-      if (content.includes(query)) {
-        post.classList.remove("hidden")
-      } else {
-        post.classList.add("hidden")
-      }
-    })
+    if (content.includes(query)) {
+      post.classList.remove("hidden")
+    } else {
+      post.classList.add("hidden")
+    }
   })
+})
 
+window.addEventListener('click', (e) => {
   window.addEventListener("keydown", (e) => {
     const command = e.metaKey || e.ctrlKey
     if (command && e.key === "k") {
@@ -57,7 +58,7 @@ const posts = (await getCollection("blog-posts"))
       searchInput.focus()
     }
   })
-
+})
 
 </script>
 

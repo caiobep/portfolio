@@ -14,13 +14,18 @@ const postUrl = `/posts/${pathname}`
 const titleTransitionName = `${pathname}-title`
 const dateFieldId = `${pathname}-date`
 
-const optmisticDate = new Date(date).toLocaleDateString()
+const optmisticDate = new Date(date).toLocaleDateString("en-US", {
+  month: 'short', 
+  day: 'numeric', 
+  year: 'numeric', 
+  daySuffix: 'ordinal' 
+})
 const titleName = title.substring(0, 55) + (title.length > 60 ? '...' : '')
 const content = `${title} ${summary}`
 ---
 
 <a href={postUrl} alt={`open blog post ${title}`} class="post" data-title={title}>
-  <div class="max-w-md h-40 border hover:border-gray-200 dark:border-gray-800 border-gray-300 rounded-lg p-4 flex flex-col gap-2 cursor-pointer hover:shadow-white transition-all hover:scale-105"> 
+  <div class="max-w-md h-40 hover:border hover:border-gray-200 rounded-lg p-4 flex flex-col gap-2 cursor-pointer dark:hover:shadow-white hover:shadow-black transition-all hover:scale-105"> 
 
     <div class="flex flex-row justify-between">
       <span id={dateFieldId} class="date text-gray-500 text-bold text-xs">Posted on {optmisticDate}</span>
@@ -34,13 +39,4 @@ const content = `${title} ${summary}`
     </div>
   </div>
 </a>
-
-<script define:vars={{ dateFieldId, date}} is:inline>
-const dateEl = document.getElementById(dateFieldId)
-const parsedDateStr = "Posted on " + new Date(date).toLocaleDateString()
-
-if (dateEl.innerHTML !== parsedDateStr) {
-  dateEl.innerHTML = parsedDateStr
-}
-</script>
 

@@ -25,7 +25,7 @@ const { title } = Astro.props
   <ViewTransitions />
 </head>
 
-<body class="px-[4rem] max-w-[104rem] mx-auto transition-all duration-300">
+<body class="px-6 sm:max-w-[90%] md:px-[4rem] max-w-[104rem] mx-auto transition-all duration-300">
   <navbar class="py-4 flex flex-row justify-between dark:text-gray-300 text-gray-900 font-medium">
     <header class="pt-2 text-xl dark:hover:text-white">
       <a href="/" class="animate__animated animate__bounceInLeft">
@@ -34,15 +34,14 @@ const { title } = Astro.props
     </header>
 
     <ul class="flex flex-row gap-1 animate__animated animate__fadeInRight">
-      <!-- <li> -->
-      <!--   <LinkButton href="/about" title="About Me" /> -->
-      <!-- </li> -->
+      <li>
+        <LinkButton
+            href="https://www.notion.so/caicorre/Projects-cfd6734a46ea4a038364fd596c428435?pvs=4"
+            title="Projects" />
+      </li>
       <li>
         <LinkButton href="/posts" title="Posts" />
       </li>
-      <!-- <li> -->
-      <!--   <LinkButton href="#" title="Search" /> -->
-      <!-- </li> -->
     </ul>
   </navbar>
 
