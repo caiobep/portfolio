@@ -9,7 +9,7 @@ const posts = (await getCollection("blog-posts"))
   .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
 ---
 
-<Layout title="Caio's Posts" class="p-5 flex gap-10">
+<Layout title="Caio's Posts" class="max-w-[1200px] mx-auto w-[80%]">
 
   <section class="pt-10 mb-4">
     <Typography variant="h1">Welcome digital home</Typography>
@@ -24,7 +24,7 @@ const posts = (await getCollection("blog-posts"))
   </section>
 
 
-  <section class="posts rounded-xl p-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-[100%]">
+  <section class="posts rounded-xl p-1 grid grid-cols-2 gap-4">
     {posts.map(p => <PostPreview title={p.data.title} summary={p.data.summary} date={p.data.date} pathname={p.slug} />)}
   </section>
 

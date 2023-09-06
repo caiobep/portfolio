@@ -20,19 +20,18 @@ const optmisticDate = new Date(date).toLocaleDateString("en-US", {
   year: 'numeric', 
   daySuffix: 'ordinal' 
 })
-const titleName = title.substring(0, 55) + (title.length > 60 ? '...' : '')
+const titleName = title.substring(0, 65) + (title.length > 65 ? '...' : '')
 const content = `${title} ${summary}`
 ---
 
 <a href={postUrl} alt={`open blog post ${title}`} class="post" data-title={title}>
-  <div class="max-w-md h-40 hover:border hover:border-gray-200 rounded-lg p-4 flex flex-col gap-2 cursor-pointer dark:hover:shadow-white hover:shadow-black transition-all hover:scale-105"> 
+  <div class="max-w-md h-40 dark:border-gray-700 rounded-lg p-4 flex flex-col gap-2 cursor-pointer transition-all hover:scale-105 hover:border border-gray-300 hover:shadow-black-100 hover:shadow-md"> 
+    <Typography variant="h4" transition:name={titleTransitionName}>{titleName}</Typography>
 
     <div class="flex flex-row justify-between">
-      <span id={dateFieldId} class="date text-gray-500 text-bold text-xs">Posted on {optmisticDate}</span>
+      <span id={dateFieldId} class="date text-gray-500 text-bold text-sm">Posted on {optmisticDate}</span>
       <!-- <span class="date text-gray-500 text-bold text-xs">5 min read</span> -->
     </div>
-
-    <Typography variant="h5" transition:name={titleTransitionName}>{titleName}</Typography>
 
     <div class="text-gray-400">
       {summary}
