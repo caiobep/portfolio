@@ -44,11 +44,18 @@ const titleTransitionName = `${slug}-title`
   }
 
   .content img {
-    width: 80%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
   }
 
+  .content pre {
+    padding: 20px 40px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    background-color: rgba(0,0,0,0.8) !important;
+    backdrop-filter: blur(10px);
+  }
 
   .content h1 {
     font-size: 1.6rem;
@@ -78,7 +85,6 @@ const titleTransitionName = `${slug}-title`
     margin-top: 2em;
     margin-bottom: 0.5rem;
   }
-
 
   .content a {
     text-decoration: underline;
