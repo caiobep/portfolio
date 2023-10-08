@@ -2,7 +2,7 @@ import { retrieveAllBlogpostsAndWriteInFolder } from './use-cases/retrieveAllBlo
 
 async function cli(args: string[]) {
   const folder = args.at(-1)
-  console.log('Writting to: ', folder)
+  console.log('Writing to: ', folder)
   await retrieveAllBlogpostsAndWriteInFolder(folder)
 }
 

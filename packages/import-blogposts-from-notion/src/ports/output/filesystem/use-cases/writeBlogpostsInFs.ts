@@ -12,6 +12,7 @@ export async function createBlogpostFileWriter(
   try {
     await fs.rm(directory, { recursive: true, force: true })
     await fs.mkdir(directory)
+    await fs.mkdir(path.join(directory, 'images'))
   } catch (ex) {
     console.error(`Could not clean dir ${directory} \r\n ${ex}`)
   }
@@ -30,8 +31,11 @@ export async function writeBlogpostInFs(
 
   const fileContents = `${postHeader} \n ${content}`
 
+  console.log('Writing file: ', fileName + ' to dir: ', directory)
+
   try {
     await fs.writeFile(path.join(directory, fileName), fileContents)
+    console.log('Writing file: ', fileName + ' to dir: ', directory + ' [done]')
   } catch (ex) {
     throw new Error(`Could not write file ${fileName}. \r\n ${ex}`)
   }

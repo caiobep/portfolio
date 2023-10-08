@@ -10,7 +10,9 @@ export async function getPageContentsInMarkdown(
   return contentInMd.parent
 }
 
-export async function createNotionMarkdownExporter() {
-  const notionMarkdownClient = createNotionToMarkdownClient()
+export async function createNotionMarkdownExporter(
+  ...args: Parameters<typeof createNotionToMarkdownClient>
+) {
+  const notionMarkdownClient = createNotionToMarkdownClient(...args)
   return (p: string) => getPageContentsInMarkdown(p, notionMarkdownClient)
 }
