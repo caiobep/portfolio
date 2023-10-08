@@ -2,7 +2,7 @@
 id: "13865f2a-210e-4f6a-9d09-171c0382bd52"
 date: "2019-10-21T00:42:00.000Z"
 title: "Design Thinking"
-summary: "\"Design thinking é uma abordagem centrada no usuário para criar soluções melhores e mais relevantes. Empatia, imersão, análise, ideação, prototipagem e evolução são as etapas fundamentais. Business Design é um framework para implementar o design thinking em negócios, explorando perfis de usuários, personas e storyboards para construir soluções.\""
+summary: "Confira como o Design Thinking pode melhorar suas soluções, focando no usuário e na empatia. Descubra mais!"
 readTime: undefined
 tagIds: ["862fbb74-da74-4e80-b03c-92f91db1ee11","ffcd889d-91ab-49a0-9ff6-e7192fced192"]
 tags: [{"id":"862fbb74-da74-4e80-b03c-92f91db1ee11","name":"FIAP","icon":""},{"id":"ffcd889d-91ab-49a0-9ff6-e7192fced192","name":"Blog","icon":"🌐"}]

@@ -60,7 +60,7 @@ Moral da história, conclusão deixando uma mensagem
 Um ciclo que começa no mundo **ordinário** vai para o mundo **extraordinário** e volta para o mundo **ordinário** como herói.
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b9dc89e5-10df-4112-adc8-0f20ee576363/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020108Z&X-Amz-Expires=3600&X-Amz-Signature=8b8b19e09d85612e118502dff6f24cc8c802531633216aff68eaf179174ec631&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/305151fa-dd96-48d2-a9b0-30e7be6bd4e2.webp)
 
 - Status QUO
 - Chamado do Herói

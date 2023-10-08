@@ -2,7 +2,7 @@
 id: "1cc1e8c5-f2d7-44ab-b6fa-7de798ce072f"
 date: "2020-03-17T17:45:00.000Z"
 title: "Why I became vegetarian?"
-summary: "\"Discover the motivations behind going vegetarian, from self-improvement to compassion with animals. Learn about the environmental impact and meat's history.\""
+summary: "Discover my journey to becoming a vegetarian, exploring self-improvement, environmental impact, compassion for animals, and more."
 readTime: undefined
 tagIds: ["ffcd889d-91ab-49a0-9ff6-e7192fced192"]
 tags: [{"id":"ffcd889d-91ab-49a0-9ff6-e7192fced192","name":"Blog","icon":"🌐"}]

@@ -23,7 +23,7 @@ It seems that Tiago is a _Evernote_ and _Things 3_ user. I've watched a intervie
 Tiago's goal is to make tasks simple to manage. (That might be the reason he's not using Notion)
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/27dfc39a-a723-4a28-abaf-1501ab8c3254/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020109Z&X-Amz-Expires=3600&X-Amz-Signature=9898def78fded6bb07b385b12e6fc3f24a0e70d8ca4388ad74c0cad077631af4&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/d98753ef-e611-4afd-88cf-953f7919d61d.webp)
 
 
 # Building a Second Brain
@@ -66,7 +66,7 @@ A continuous area of commitment. Habits, routines, rituals all of those are a ar
 Areas are different to projects because you maintain areas and you achieve projects. They require very different mindsets. Projects are time bounded while areas are continous.
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/121189e5-56b8-4744-b7e6-6fcddb9de0c0/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020111Z&X-Amz-Expires=3600&X-Amz-Signature=ccf9656ce771fbc7514efac990f7d03583ad70557a67501b8763843a7a96ba58&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/4b15c60a-e315-48ad-9bf1-6131d2339335.webp)
 
 
 ## Mindsweep
@@ -215,7 +215,7 @@ You're allways adding to and building your knowledge base
 Images, audio, video, tweets, books, articles, music, diagrams, sketches, code, demos, sliders, websites, podcasts and much more!
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5194aaef-c5c5-4198-8ef9-4fdca1b7eb17/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020111Z&X-Amz-Expires=3600&X-Amz-Signature=68c927019b9addb210807ddacf8f1dab6e1bc1f999ac9541473d46b391bf025f&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/7298a5bf-a413-4ad0-ad59-703a0887ad2e.webp)
 
 
 ## Consuming Information

@@ -86,7 +86,7 @@ const averagePasteriesForMinute = (
 </details>
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d1f11336-cbed-44c8-ad8f-18834bc84744/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020109Z&X-Amz-Expires=3600&X-Amz-Signature=0c770126463780d4c9b9f1ec804f0fb4e7f197c264fa1541f8f71c9068984a67&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/b35a601f-fc6a-4280-b152-d58bc1c168bc.webp)
 
 
 [_**Gene Amdahl**_](https://en.wikipedia.org/wiki/Gene_Amdahl)
@@ -98,10 +98,10 @@ const averagePasteriesForMinute = (
 When you think about parallel and non-parallel tasks it should be obvious that adding more workers will only make you faster at the parts of a task that can be done in parallel. [_**Amdahl's law**_ ](https://en.wikipedia.org/wiki/Amdahl%27s_law)says that we cannot make a task faster just by putting more agents into the task. This conclusion came after a paper from _**Gene Amdahl**_  in 1967
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/89fbdc23-d3ca-4d7b-a278-d2d16f37fb7e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020110Z&X-Amz-Expires=3600&X-Amz-Signature=0c2fac449ef18c36036b13d844b9df3cf834717ff52ba37100b8c18b35516bb5&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/36e4320e-3e95-4c35-8f11-e00ebfb01fc6.webp)
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d72f66ef-6493-43fc-9f49-3359b7947540/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020110Z&X-Amz-Expires=3600&X-Amz-Signature=d97994b0b40266c618b5e2bccb0b8fbe14c6587b7607ffe09c03b36d23cd9555&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/12d2ee4e-693c-476b-9bb6-09835baf33b1.webp)
 
 
 ## Pipelining
@@ -113,13 +113,13 @@ Pipelining is a very common form of parallelism when you think about making cook
 This form of parallelism is called _Pipelining._ By working on different branches of your work in parallel.
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fbcf8129-a7c9-48de-882d-d08849baaa80/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020109Z&X-Amz-Expires=3600&X-Amz-Signature=29d9b45d6157c0b096c3e5228f169e4bf455cfa39417fba7282126b5d34911a0&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/2c2bae11-8f4a-4136-ba91-1a3607ef164e.webp)
 
 
 Pipeline is also used in computer generated graphics to predict which chunks it will need to render next. This concept is called _speculative execution._
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2538d496-4ef9-40d1-9233-59b288bf1a4a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020111Z&X-Amz-Expires=3600&X-Amz-Signature=96eb1b69a7acc6405ef90ddebc7ad42e74b19cd641c65b5fcc817fd08272cf75&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/ea6f81de-2c33-4b79-af98-ee253956cb40.webp)
 
 
 ## Concurency

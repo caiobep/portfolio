@@ -1,6 +1,6 @@
 ---
-id: "b17f896b-adf1-402f-bcd9-0e9b262e50bb"
-date: "2021-09-22T02:59:00.000Z"
+id: "604e414a-faef-4079-8640-8d29f7de5928"
+date: "2022-05-31T00:05:00.000Z"
 title: "How to prevent inheritance on TypeScript/JavaScript"
 summary: undefined
 readTime: undefined

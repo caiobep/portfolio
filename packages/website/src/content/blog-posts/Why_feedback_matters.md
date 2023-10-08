@@ -2,7 +2,7 @@
 id: "28df2987-80f1-4675-a6e1-d163fe9bbf1d"
 date: "2020-04-09T03:20:00.000Z"
 title: "Why feedback matters"
-summary: "\"Feedback is key to improvement and success - learn how to give effective feedback in this chapter. Overcome your fear of giving feedback and try these tips to create positive and corrective feedback that will improve teamwork and problem-solving. Discover what makes feedback effective so you can deliver it in the right way and achieve specific outcomes. Don't miss out on this essential skill for personal and professional growth.\""
+summary: "Why Feedback Matters: The Power of Constant Feedback for Personal and Organizational Growth. Overcoming Fear, Effective Delivery, and Positive Impact."
 readTime: undefined
 tagIds: ["ffcd889d-91ab-49a0-9ff6-e7192fced192"]
 tags: [{"id":"ffcd889d-91ab-49a0-9ff6-e7192fced192","name":"Blog","icon":"🌐"}]

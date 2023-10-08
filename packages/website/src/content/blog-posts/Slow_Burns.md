@@ -2,7 +2,7 @@
 id: "1cdfa615-a453-48a5-8d1e-961578d2ffee"
 date: "2020-03-31T04:54:00.000Z"
 title: "Slow Burns"
-summary: "\"Slow Burns\" is a productivity technique that helps you turn tasks into habits, allowing you to pick up where you left off. Learn how to use this technique to boost your productivity and make the most of your second brain."
+summary: "\"Slow Burns: Harnessing the Power of Habits to Maximize Productivity and Focus.\""
 readTime: undefined
 tagIds: ["eeab6baa-f55b-4cf3-a8e8-dd3baccb9cc3","ffcd889d-91ab-49a0-9ff6-e7192fced192"]
 tags: [{"id":"eeab6baa-f55b-4cf3-a8e8-dd3baccb9cc3","name":"Building A Second Brain Podcast","icon":""},{"id":"ffcd889d-91ab-49a0-9ff6-e7192fced192","name":"Blog","icon":"🌐"}]

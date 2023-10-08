@@ -29,10 +29,10 @@ Dennins M. Ritchie C Programming Language (Chapter 0)
 Bjarne Stroustrup C++ Progamming Language (Chapter 0)
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4814ce4c-d33b-4320-811d-bb3af9e6e6ea/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020110Z&X-Amz-Expires=3600&X-Amz-Signature=5b0eaf1b6c3ae8bdb1231837d71546f2904eadb4d2fdd18ed6c4a95cea286e13&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/08d0d3dc-ff14-47a5-8144-eb7d1fa6f989.webp)
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/959079ac-594c-462f-9b91-16dce32450fb/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020110Z&X-Amz-Expires=3600&X-Amz-Signature=d9fbf3b297a86f4ec1b35cf2928afd055be06b31c20b984616b41758a165b3ea&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/6409d161-4ec5-4228-89b4-0284de0f8a35.webp)
 
 
 # Apple Computers
@@ -70,7 +70,7 @@ The first person to write code as we recognize as code.
 Alan, writes a paper 
 
 
-[Charles_Petzold-Annotated_Turing-Wiley%282008%29.pdf](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ca8fcc0b-716d-4265-ae24-06110637fc62/Charles_Petzold-Annotated_Turing-Wiley%282008%29.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020110Z&X-Amz-Expires=3600&X-Amz-Signature=54f738e12c6b87fdab3fe9d20bf5452ca449a517a4eb4bdd57bbbd7b299c8440&X-Amz-SignedHeaders=host&x-id=GetObject)
+[Charles_Petzold-Annotated_Turing-Wiley%282008%29.pdf](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ca8fcc0b-716d-4265-ae24-06110637fc62/Charles_Petzold-Annotated_Turing-Wiley%282008%29.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231008%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231008T181728Z&X-Amz-Expires=3600&X-Amz-Signature=723ec0a98a35f498e380aeb57c1f223f5fb7ff5ff03d7f9c8360038947f61536&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 - Binary (Reversed ¯\_(ツ)_/¯ )
 - Integer `add` and logical `not`
@@ -302,7 +302,7 @@ What have changed?
 ## 2001 - Snowbird Agile Manifesto
 
 
-![CleanShot_2019-07-19_at_01.58.32.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/451a5972-40aa-40ed-b31b-6a284a6f8bcb/CleanShot_2019-07-19_at_01.58.32.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020110Z&X-Amz-Expires=3600&X-Amz-Signature=2a1710edb5079b5f19b379077ede143bc9cb28ed9ef135ba4bda11b34cf12d74&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/d8606ce0-bcb3-4271-94e8-cbc362ab5dd4.webp)
 
 
 ## Agile Manifesto

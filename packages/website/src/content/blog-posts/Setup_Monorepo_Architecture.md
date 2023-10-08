@@ -92,7 +92,7 @@ Nx tutorials are simply awesome, they have a lot of youtube videos with great ex
 One magical thing Nx have is a graph of your dependencies. By using this graph Nx reduces the time of build and test on your pipeline since it only lint/test/executes what actually needs. This makes Nx veeeery scalable for big projects. Nx also uses a lot of resources to extend the linting rules and make them work nicely with a base set of rules
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/445c9617-6fbc-4862-98c3-aa66be802d7f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020109Z&X-Amz-Expires=3600&X-Amz-Signature=7b3cc1f56c1430059fb0b56e996c3145720fde36bdc6d2d590c0d2af51227f7e&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/66b41945-f0f4-435c-805b-b4b0072dd206.webp)
 
 
 Nx enforces a lot of good practices right out of the box. Some things that I've found interesting contain:

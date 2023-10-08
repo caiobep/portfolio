@@ -2,7 +2,7 @@
 id: "17e9bde8-6104-4c97-b537-bb2158fe500d"
 date: "2020-03-31T04:54:00.000Z"
 title: "Intermediate Packets"
-summary: "\"Intermediate Packets\" are a way to divide work into manageable tasks. Finish a task when you have time, not the whole project. Learn more."
+summary: "\"Unlocking Productivity: The Power of Intermediate Packets to Maximize Your Time and Project Efficiency. Learn how to divide your work effectively and make progress step by step.\""
 readTime: undefined
 tagIds: ["eeab6baa-f55b-4cf3-a8e8-dd3baccb9cc3","ffcd889d-91ab-49a0-9ff6-e7192fced192"]
 tags: [{"id":"eeab6baa-f55b-4cf3-a8e8-dd3baccb9cc3","name":"Building A Second Brain Podcast","icon":""},{"id":"ffcd889d-91ab-49a0-9ff6-e7192fced192","name":"Blog","icon":"🌐"}]

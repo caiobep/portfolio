@@ -1,97 +1,259 @@
 ---
-id: "c31281ee-e65a-4fb9-ba0d-393d54676695"
+id: "cbd25b39-ea8b-4cfd-9bf7-bbdb24c0a201"
 date: "2020-03-09T12:22:00.000Z"
 title: "CS Series:  "
-summary: "\"Unlocking the Mysteries of Memory in Computing\" explores the fundamental concepts of memory in computing, including bounded memory slots, binary storage, and the use of pointers. Learn why understanding memory is crucial to understanding data structures and optimizing algorithms."
+summary: "Learn how to analyze the performance of an algorithm using Big O Notation, a powerful tool that allows you to generalize the space-time complexity of an algorithm as a function of its input size. Understand the most common notations, such as O(1), O(log n), O(n), O(n log n), O(n²), and O(2^n), and discover how to use them to measure time and space complexity. Also, find out about asymptotic analyses, the worst-case scenario, and the difference between time and space complexity."
 readTime: undefined
 tagIds: ["fffa10ea-d586-4b9d-a397-f7e3a0db635f","ed316d45-b88a-48a5-920a-5a2a154bcbe5","a82004cd-5435-4ab5-af04-c0898ae2044c","56275194-6e13-4cd3-ae9a-4a285a880bcb","ffcd889d-91ab-49a0-9ff6-e7192fced192"]
 tags: [{"id":"fffa10ea-d586-4b9d-a397-f7e3a0db635f","name":"Systems Design Fundamentals","icon":""},{"id":"ed316d45-b88a-48a5-920a-5a2a154bcbe5","name":"Study","icon":"🧠"},{"id":"a82004cd-5435-4ab5-af04-c0898ae2044c","name":"Software Engineering","icon":"⚙"},{"id":"56275194-6e13-4cd3-ae9a-4a285a880bcb","name":"Computer Science","icon":""},{"id":"ffcd889d-91ab-49a0-9ff6-e7192fced192","name":"Blog","icon":"🌐"}]
 --- 
  
-# Memory
+# Big O Notation
 
 
-The bedrock of all data structures, memory is the underlying concept that you absolutely need to know in order to understand why data structures work the way they do. 
+The speed and memory usage of an algorithm aren't necessarily fixed; they might change depending on the input. So how do we express the performance of an algorithm then?
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d1e76df0-db81-4851-bb1a-28a5753170e8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020110Z&X-Amz-Expires=3600&X-Amz-Signature=039d66973e2b9f1eff5a6a9c93451f787d9faf6581fb7bfe760e1dc170c135b0&X-Amz-SignedHeaders=host&x-id=GetObject)
+> Enter Big O Notation, a powerful tool that allows us to generalize the space-time complexity of an algorithm as a function of its input size.
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/46c1d7ca-704f-4943-bbe8-9eb2f065e3e4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020110Z&X-Amz-Expires=3600&X-Amz-Signature=4682da1631e72922b5182c0caecf19fff7b6612fdd07da8ef0938f347ba46d1b&X-Amz-SignedHeaders=host&x-id=GetObject)
+Let's say we have an array of n length
 
 
-## Memory
-
-<details>
-<summary>Bounded Memory Slots</summary>
-
-The important thing is to Know that memory are bounded, they have a limit.
+$$
+a = [...]
+$$
 
 
-</details>
-
-<details>
-<summary>Stored in Base 2 (Binary)</summary>
-
-Values are stored in Binary
+And the following functions
 
 
-</details>
-
-<details>
-<summary>1 Memory slot Can Hold 8bits or 1 Byte</summary>
-
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9907e964-06c0-41c1-947c-b6f652fe5140/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020111Z&X-Amz-Expires=3600&X-Amz-Signature=9d7731e74fec3ca4eca981b48f7e39068346d3cfe94bc1b4a6eef420237d2ba8&X-Amz-SignedHeaders=host&x-id=GetObject)
+$$
+f_1(a) = 1 + a[0]
+$$
 
 
-</details>
-
-<details>
-<summary>Integer → Fixed Width (32 or 64 bits)</summary>
-
-Integers will always have fixed width (that's what allows us to increment and decrement without having any issues)
+Simply returns the first element of array plus one
 
 
-</details>
-
-<details>
-<summary>Lists → Times Integer Space</summary>
-
-Lists will always fill the space of it's members
+$$
+f_2(a) = sum(a)
+$$
 
 
-</details>
-
-<details>
-<summary>🤯 Memory can be filled with memory (Pointers)</summary>
-
-A memory slot can indicate another memory slot
+Return the sum of all elements in array
 
 
-</details>
+$$
+f_3(a) = pair(a)
+$$
 
 
-[Bit](https://www.notion.so/fb687c92bd4d4a97917e4fc271554bc4) 
+Each possible pair combination
 
 
-[Byte](https://www.notion.so/74168e651f59422ca8a68315d76df168) 
+All of those algorithms take an array.
 
 
-[Fixed-width Integer](https://www.notion.so/245284a3456e4e9b87a1660f4ff668f3) 
+```javascript
+const sum = arr => arr.reduce((acc, el) => acc + el, 0)
+const pair = arr => 
+  arr.map(mainEl => arr.map(secondEl => [mainEl, secondEl]))
+
+const arrayWithLengh = length => Array.from({length}, (v, k) => k+1)
 
 
-## Memory
+const a = arrayWithLengh(10)
+const a100Elements =  arrayWithLengh(100)
+const a1000Elements = arrayWithLengh(1000)
+
+const f1 = (x) => 1 + x[0]
+const f2 = (x) => sum(x) 
+const f3 = (x) => pair(x)
+
+// Computed time For 1 Element
+f1(a) // ~0.021ms (for 1 element)
+f2(a) // ~0.046ms (for 1 element)
+f3(a) // ~0.065ms (for 1 element)
+
+// Computed time For 10 Elements
+f1(a) // ~0.027ms (for 10 elements)
+f2(a) // ~0.059ms (for 10 elements)
+f3(a) // ~0.116ms (for 10 elements)
+
+// Computed time For 100 Elements
+f1(a100Elements) // ~0.021ms (for 100 elements)
+f2(a100Elements) // ~0.071ms (for 100 elements)
+f3(a100Elements) // ~3.644ms (for 100 elements)
+
+// Computed time For 1000 Elements
+f1(a1000Elements) // ~0.020ms (for 1000 elements)
+f2(a1000Elements) // ~0.263ms (for 1000 elements)
+f3(a1000Elements) // ~96.810ms (for 1000 elements)
+```
 
 
-Broadly speaking, memory is the foundational layer of computing where all data is stored.
+You can see that the speed of each algorithm is directly related to the length of the array. Big O notation help us understand and compare the complexity of each algorithm.
 
 
-In the context of coding interviews, it's important node the following points:
+$$
+f_1(a) = 1 + a[0]
+$$
 
-- Data stored in memory is stored in bytes and, by extension bits.
-- Bytes in memory can "point" to other bytes in memory, so as to store references to other data.
-- The amount of memory that a machine has is bounded, making it valuable to limit how memory an algorithm takes up.
-- Accessing a byte of a fixed number of bytes (like 4 bytes or 8 bytes in the case of 32-bit and 64-bit integers) is an elementary operation, which can be loosely treated as a single unit of operational work
+
+    Time Complexity: **O(1)**
+
+
+              **Constant**
+
+
+$$
+f_2(a) = sum(a)
+$$
+
+
+    Time Complexity: **O(N)**
+
+
+                  **Linear**
+
+
+$$
+f_3(a) = pair(a)
+$$
+
+
+Time Complexity: **O(N²)**
+
+
+              **Quadratic**
+
+
+## Asymptotic Analyses
+
+
+An example of [What is Asymptotic Analyses?](https://www.notion.so/757edc73626c4db8aebaabdd9be1b4d6) is a function f4 that contains all other functions 
+
+
+$$
+f_4(a)= f_1(a) + f_2(a) + f_3(a)
+$$
+
+
+This means that f4 have the complexity of 
+
+
+$$
+O(1) + O(n) + O(n^2) ∴ O(n^2 + n + 1)
+$$
+
+
+But notice how **n** and **1** is irrelevant when compared with **n²**, so in this case we just say **O(n²)**
+
+
+## Most Used Notations
+
+
+---
+
+
+![](./images/f30609be-7e4e-4145-af59-47ac9de553f3.webp)
+
+
+$$
+O(1) \\ \scriptsize \color{gray}Constant
+$$
+
+
+$$
+O(log\space n) \\ \scriptsize \color{gray} Logaritimic
+$$
+
+
+$$
+O(n) \\ \scriptsize \color{gray} Linear
+$$
+
+
+$$
+O(n * log\space n)  \\ \scriptsize \color{gray} Linearithimic
+$$
+
+
+$$
+O(n^2), O(n^3), O(n^4)  \\ \scriptsize \color{gray} Quadratic,  Cubic, Polynomial 
+$$
+
+
+$$
+O(2^n) \\ \scriptsize \color{gray} Exponential
+$$
+
+
+$$
+O(n!) \\ \scriptsize \color{gray} Factorial
+$$
+
+
+> 🔥 _Big O Notation_ always refer to the **worst** **case** scenario
+
+
+## Few Examples
+
+
+O(25) → O(1)
+
+
+O(2n) → O(n)
+
+
+O(n² + 2n) → O(n²)
+
+
+O(n³ + log(n) + 3) → O(n³)
+
+
+O(n + m) → O(n + m)
+
+
+O(2n + m) → O(n + m)
+
+
+The most common Big O Notations are:
+
+
+O(1) → Constant | Accessing a memory address
+
+
+O(log n) → Logarithmic | Binary Search
+
+
+O(n) → Linear | Iterating an Array 
+
+
+O(n log n) → Linearithimic | Iterating an Array 
+
+
+O(n²) → Quadratic | Nested Iterations
+
+
+O(2^n) → Exponential | Nested Iterations
+
+
+O(n!) → Factorial | Generate all permutations of a list
+
+
+## Time Complexity
+
+
+A measure of how fast an algorithm runs, time complexity is a central concept in the field of algorithms. It's expressed by using Big O notation.
+
+
+## Space Complexity
+
+
+A measure of how much auxiliary memory an algorithm takes up, space complexity is a central concept in the field of algorithms and it's also expressed using Big O notation
+
 
 Flash Cards
 

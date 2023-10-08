@@ -2,7 +2,7 @@
 id: "234e8d95-d359-47c1-879b-d3b38c4b32c9"
 date: "2019-07-31T13:30:00.000Z"
 title: "Agile At Microsoft"
-summary: "Discover how Microsoft's agile transformation changed culture, planning, and learning. Learn about balanced autonomy, team sport, and continuous planning."
+summary: "Agile at Microsoft transformed culture, teams, planning, and learning. Autonomy, alignment, and staying healthy drive success."
 readTime: undefined
 tagIds: ["2f7258f0-a90b-4b19-8a7c-3df4593f5fc8","ffcd889d-91ab-49a0-9ff6-e7192fced192"]
 tags: [{"id":"2f7258f0-a90b-4b19-8a7c-3df4593f5fc8","name":"Agile","icon":"🏃"},{"id":"ffcd889d-91ab-49a0-9ff6-e7192fced192","name":"Blog","icon":"🌐"}]

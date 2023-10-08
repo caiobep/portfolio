@@ -36,13 +36,13 @@ Well if you're familiar with using multiple windows from the same application on
 It looks like this
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/af1e1d51-dca0-4f2d-aec4-5d73a3cfe3de/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020108Z&X-Amz-Expires=3600&X-Amz-Signature=f2454304fa77e62931a1f8c6814776e3b534a798b6aac7b77afc5b2c7458faf0&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/d3cc2eea-2fe4-4ad0-8622-8d56486f3e6c.webp)
 
 
 This macro is on my Google Chrome macro group which means it will only run when the browser is active
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1fc18b1c-fd7f-48f5-86ac-b33a72199c61/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020108Z&X-Amz-Expires=3600&X-Amz-Signature=4bbea7787a8642cedcc7dffbf6d5e27f675ff28d989d93be26882852bb207f3d&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/f9727852-b26f-4ac6-8d4f-c61aef3c0e3d.webp)
 
 
 And that's it! Here's the Apple Script code in case you need it 

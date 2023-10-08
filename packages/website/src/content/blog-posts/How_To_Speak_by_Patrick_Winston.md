@@ -11,13 +11,13 @@ tags: [{"id":"bfb4a2f0-e269-4f83-b3aa-e00d0b66c960","name":"Shared with me","ico
 <iframe src="https://www.youtube.com/watch?time_continue=10&v=Unzc731iCUY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fbc3c3f4-5692-47ad-baab-f7f1dfeee314/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020109Z&X-Amz-Expires=3600&X-Amz-Signature=085a9cfa14fd59d7a48397dbec37e8a371cf1859d4021df0075837334e7a8077&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/b36cb16c-3405-443e-829c-d0152e3530c2.webp)
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a7dec776-ba26-4fdc-a7aa-de9a7bcb8dfa/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020109Z&X-Amz-Expires=3600&X-Amz-Signature=ec4b0b1dee147c843c1cbdf3b467e93e745a36ea20f59181d4ec538866850f0f&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/4a14cb14-3553-464a-b48b-972482bf415f.webp)
 
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/efb0809c-75bb-45a5-aeae-718353ab40de/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020109Z&X-Amz-Expires=3600&X-Amz-Signature=88711fc5dc85f6cb01a62c146ce6baa270b5cb553cbb0c6ad5cac51de1f24789&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/1f520d27-7f49-45e2-b90a-6aaf62636ef8.webp)
 
 
 # How to Speak
@@ -151,7 +151,7 @@ Getting famous is important if you want to be recognized.
 	- **Salient Idea** that sticks out
 	- **Story** on how you did it, how it works, why is it important
 
-![Untitled.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/24c78862-ee4e-46ce-9f07-5585d76c08e2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230904T020114Z&X-Amz-Expires=3600&X-Amz-Signature=dc8ebdcbd82b631e0ca26319593eb4aafc8d418cee61a8083a6b9abaa4de1a4f&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](./images/7714e18b-8e1b-4c00-a14e-4b063f09e515.webp)
 
 
 ## How to Stop
