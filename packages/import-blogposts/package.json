@@ -1,5 +1,5 @@
 {
-  "name": "import-blogposts-from-notion",
+  "name": "import-blogposts",
   "version": "0.0.0",
   "description": "",
   "engine": {
@@ -21,6 +21,7 @@
     "notion-to-md": "~3.1.1",
     "sharp": "~0.32.5",
     "tsm": "~2.3.0",
+    "uuid": "~9.0.0",
     "typescript": "~5.2.2"
   },
   "author": "Caio Amaral Corrêa <caiobep@me.com> (https://github.com/caiobep)",
